@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="APPDIR">
+            <Component Id="AsyncIO.dll" Guid="{70A7F326-D16A-425D-AE0A-2B08E174888F}">
+                <File Id="AsyncIO.dll" KeyPath="yes" Source="$(var.BuildDir)\AsyncIO.dll" />
+            </Component>
+            <Component Id="AsyncIO.pdb" Guid="{6B66C0DB-A26C-4960-9ADD-8011CB68E5B1}">
+                <File Id="AsyncIO.pdb" KeyPath="yes" Source="$(var.BuildDir)\AsyncIO.pdb" />
+            </Component>
+            <Component Id="BouncyCastle.Cryptography.dll" Guid="{2A755655-E2B7-44B5-B41A-A3803C9AE925}">
+                <File Id="BouncyCastle.Cryptography.dll" KeyPath="yes" Source="$(var.BuildDir)\BouncyCastle.Cryptography.dll" />
+            </Component>
+            <Component Id="CefSharp.BrowserSubprocess.Core.dll" Guid="{8270C5CD-DC28-4A0B-8F9B-F1F06E68EE25}">
+                <File Id="CefSharp.BrowserSubprocess.Core.dll" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.BrowserSubprocess.Core.dll" />
+            </Component>
+            <Component Id="CefSharp.BrowserSubprocess.Core.pdb" Guid="{1FD26BAD-6F87-4868-908A-917B022973EA}">
+                <File Id="CefSharp.BrowserSubprocess.Core.pdb" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.BrowserSubprocess.Core.pdb" />
+            </Component>
+            <Component Id="CefSharp.BrowserSubprocess.exe" Guid="{94D6F2EB-22F3-44EE-A2D7-BA38158EDC57}">
+                <File Id="CefSharp.BrowserSubprocess.exe" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.BrowserSubprocess.exe" />
+            </Component>
+            <Component Id="CefSharp.BrowserSubprocess.pdb" Guid="{E1637D64-57EF-4CCB-920D-BADC431C8B3C}">
+                <File Id="CefSharp.BrowserSubprocess.pdb" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.BrowserSubprocess.pdb" />
+            </Component>
+            <Component Id="CefSharp.Core.dll" Guid="{CA57667F-83C1-4423-877E-D655E43861F9}">
+                <File Id="CefSharp.Core.dll" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Core.dll" />
+            </Component>
+            <Component Id="CefSharp.Core.pdb" Guid="{D600B4A6-BCDA-4E9B-97C5-3AFDDA517BC2}">
+                <File Id="CefSharp.Core.pdb" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Core.pdb" />
+            </Component>
+            <Component Id="CefSharp.Core.Runtime.dll" Guid="{1C942F0D-72F0-4CE5-97D5-9A7BEDF7F507}">
+                <File Id="CefSharp.Core.Runtime.dll" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Core.Runtime.dll" />
+            </Component>
+            <Component Id="CefSharp.Core.Runtime.pdb" Guid="{B4657C8D-0EBD-41C3-A270-7A084845661F}">
+                <File Id="CefSharp.Core.Runtime.pdb" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Core.Runtime.pdb" />
+            </Component>
+            <Component Id="CefSharp.Core.Runtime.xml" Guid="{09C580C9-9D64-406F-BFE8-445B168C5824}">
+                <File Id="CefSharp.Core.Runtime.xml" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Core.Runtime.xml" />
+            </Component>
+            <Component Id="CefSharp.dll" Guid="{9A1E04CC-ACA0-47A3-B798-F7762C493FA1}">
+                <File Id="CefSharp.dll" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.dll" />
+            </Component>
+            <Component Id="CefSharp.pdb" Guid="{320641A8-3D1B-42AD-87D3-8E0F0CF366FD}">
+                <File Id="CefSharp.pdb" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.pdb" />
+            </Component>
+            <Component Id="CefSharp.Wpf.dll" Guid="{FD92227F-E226-4E7E-90F1-F879695A2F55}">
+                <File Id="CefSharp.Wpf.dll" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Wpf.dll" />
+            </Component>
+            <Component Id="CefSharp.Wpf.pdb" Guid="{31F9811B-288A-4289-A5AF-89BA0BFE3C73}">
+                <File Id="CefSharp.Wpf.pdb" KeyPath="yes" Source="$(var.BuildDir)\CefSharp.Wpf.pdb" />
+            </Component>
+            <Component Id="chrome_100_percent.pak" Guid="{C6C8AF51-AB02-462B-A528-2F991C74B469}">
+                <File Id="chrome_100_percent.pak" KeyPath="yes" Source="$(var.BuildDir)\chrome_100_percent.pak" />
+            </Component>
+            <Component Id="chrome_200_percent.pak" Guid="{21289A48-04C6-4041-87C6-C190422F073F}">
+                <File Id="chrome_200_percent.pak" KeyPath="yes" Source="$(var.BuildDir)\chrome_200_percent.pak" />
+            </Component>
+            <Component Id="chrome_elf.dll" Guid="{37A37403-71D2-4907-AEF0-6D44F986741F}">
+                <File Id="chrome_elf.dll" KeyPath="yes" Source="$(var.BuildDir)\chrome_elf.dll" />
+            </Component>
+            <Component Id="Crc32.NET.dll" Guid="{ECE6A1B7-8DB6-45E2-A895-E8AC92B8347E}">
+                <File Id="Crc32.NET.dll" KeyPath="yes" Source="$(var.BuildDir)\Crc32.NET.dll" />
+            </Component>
+            <Component Id="d3dcompiler_47.dll" Guid="{89944A61-E50A-423A-A1DA-A54BBF5DF144}">
+                <File Id="d3dcompiler_47.dll" KeyPath="yes" Source="$(var.BuildDir)\d3dcompiler_47.dll" />
+            </Component>
+            <Component Id="default.config.xml" Guid="{1A06710D-87D5-4338-986A-7E26A406AA60}">
+                <File Id="default.config.xml" KeyPath="yes" Source="$(var.BuildDir)\default.config.xml" />
+            </Component>
+            <Component Id="DotNetZip.dll" Guid="{F9F3AFC2-154D-4B98-8B87-A42AF87F1D53}">
+                <File Id="DotNetZip.dll" KeyPath="yes" Source="$(var.BuildDir)\DotNetZip.dll" />
+            </Component>
+            <Component Id="DotNetZip.pdb" Guid="{DABB468D-43C1-47E1-B826-FE822D14966F}">
+                <File Id="DotNetZip.pdb" KeyPath="yes" Source="$(var.BuildDir)\DotNetZip.pdb" />
+            </Component>
+            <Component Id="dxcompiler.dll" Guid="{5F527376-5222-44E2-B7EB-496E8651433A}">
+                <File Id="dxcompiler.dll" KeyPath="yes" Source="$(var.BuildDir)\dxcompiler.dll" />
+            </Component>
+            <Component Id="dxil.dll" Guid="{A27F054C-6D45-473F-96F9-DF4153A7F78B}">
+                <File Id="dxil.dll" KeyPath="yes" Source="$(var.BuildDir)\dxil.dll" />
+            </Component>
+            <Component Id="EmbedIO.dll" Guid="{3AE4A936-21E9-4981-993F-81A556204166}">
+                <File Id="EmbedIO.dll" KeyPath="yes" Source="$(var.BuildDir)\EmbedIO.dll" />
+            </Component>
+            <Component Id="EmbedIO.pdb" Guid="{10B14589-CAB6-4DCC-9BD2-4D864F189446}">
+                <File Id="EmbedIO.pdb" KeyPath="yes" Source="$(var.BuildDir)\EmbedIO.pdb" />
+            </Component>
+            <Component Id="e_sqlite3.dll" Guid="{1DBFE874-A498-4D3F-921D-83416A5C5CE8}">
+                <File Id="e_sqlite3.dll" KeyPath="yes" Source="$(var.BuildDir)\e_sqlite3.dll" />
+            </Component>
+            <Component Id="Flurl.dll" Guid="{88230D72-96C6-4967-93DB-631E1608634C}">
+                <File Id="Flurl.dll" KeyPath="yes" Source="$(var.BuildDir)\Flurl.dll" />
+            </Component>
+            <Component Id="Flurl.Http.dll" Guid="{F6B3A5C6-2DDC-40E2-A0EB-04606E4946BB}">
+                <File Id="Flurl.Http.dll" KeyPath="yes" Source="$(var.BuildDir)\Flurl.Http.dll" />
+            </Component>
+            <Component Id="GeoJSON.Net.Contrib.MsSqlSpatial.dll" Guid="{21252D0A-C0C5-43D6-BBDA-D9C1094AA0E7}">
+                <File Id="GeoJSON.Net.Contrib.MsSqlSpatial.dll" KeyPath="yes" Source="$(var.BuildDir)\GeoJSON.Net.Contrib.MsSqlSpatial.dll" />
+            </Component>
+            <Component Id="GeoJSON.Net.dll" Guid="{F70C4E55-923C-4B86-9584-8C5EA9E50A2F}">
+                <File Id="GeoJSON.Net.dll" KeyPath="yes" Source="$(var.BuildDir)\GeoJSON.Net.dll" />
+            </Component>
+            <Component Id="icudtl.dat" Guid="{8C1BF34E-3ED0-4A97-8367-9DAA6F37418B}">
+                <File Id="icudtl.dat" KeyPath="yes" Source="$(var.BuildDir)\icudtl.dat" />
+            </Component>
+            <Component Id="libcef.dll" Guid="{E67737D9-7CF3-4E6D-94E6-2AE7746A893A}">
+                <File Id="libcef.dll" KeyPath="yes" Source="$(var.BuildDir)\libcef.dll" />
+            </Component>
+            <Component Id="libEGL.dll" Guid="{225EF2E0-70C6-4D62-8572-2A156ADE4B2C}">
+                <File Id="libEGL.dll" KeyPath="yes" Source="$(var.BuildDir)\libEGL.dll" />
+            </Component>
+            <Component Id="libGLESv2.dll" Guid="{614E3437-0BE6-4AB3-BD80-3FFBD85BA708}">
+                <File Id="libGLESv2.dll" KeyPath="yes" Source="$(var.BuildDir)\libGLESv2.dll" />
+            </Component>
+            <Component Id="Microsoft.Bcl.AsyncInterfaces.dll" Guid="{EB5BD678-0119-40A8-A4D2-E14C0E5D6C56}">
+                <File Id="Microsoft.Bcl.AsyncInterfaces.dll" KeyPath="yes" Source="$(var.BuildDir)\Microsoft.Bcl.AsyncInterfaces.dll" />
+            </Component>
+            <Component Id="Microsoft.Data.Sqlite.dll" Guid="{CD6E6AEE-8D1B-46D5-AA05-419338290091}">
+                <File Id="Microsoft.Data.Sqlite.dll" KeyPath="yes" Source="$(var.BuildDir)\Microsoft.Data.Sqlite.dll" />
+            </Component>
+            <Component Id="Microsoft.SqlServer.Types.dll" Guid="{D98AF7ED-579C-4F6B-B318-E00196725591}">
+                <File Id="Microsoft.SqlServer.Types.dll" KeyPath="yes" Source="$(var.BuildDir)\Microsoft.SqlServer.Types.dll" />
+            </Component>
+            <Component Id="Microsoft.Web.WebView2.Core.dll" Guid="{9768246A-F282-487E-AA2E-3A541DFF5E8C}">
+                <File Id="Microsoft.Web.WebView2.Core.dll" KeyPath="yes" Source="$(var.BuildDir)\Microsoft.Web.WebView2.Core.dll" />
+            </Component>
+            <Component Id="Microsoft.Web.WebView2.WinForms.dll" Guid="{CCB254A8-52E7-42B7-B329-A6B6C6D8125F}">
+                <File Id="Microsoft.Web.WebView2.WinForms.dll" KeyPath="yes" Source="$(var.BuildDir)\Microsoft.Web.WebView2.WinForms.dll" />
+            </Component>
+            <Component Id="Microsoft.Web.WebView2.Wpf.dll" Guid="{AEF20C8F-4489-4C54-A95D-7663C995A3A7}">
+                <File Id="Microsoft.Web.WebView2.Wpf.dll" KeyPath="yes" Source="$(var.BuildDir)\Microsoft.Web.WebView2.Wpf.dll" />
+            </Component>
+            <Component Id="msvcr120.dll" Guid="{288A8A3A-5F67-4A34-B7A1-D19012ADBC61}">
+                <File Id="msvcr120.dll" KeyPath="yes" Source="$(var.BuildDir)\msvcr120.dll" />
+            </Component>
+            <Component Id="NaCl.dll" Guid="{1252F597-C251-422A-8A29-B51FEEB1497A}">
+                <File Id="NaCl.dll" KeyPath="yes" Source="$(var.BuildDir)\NaCl.dll" />
+            </Component>
+            <Component Id="NetMQ.dll" Guid="{DC9BF4AA-DF4E-4FA4-8E60-6DAE2D4D9763}">
+                <File Id="NetMQ.dll" KeyPath="yes" Source="$(var.BuildDir)\NetMQ.dll" />
+            </Component>
+            <Component Id="Newtonsoft.Json.dll" Guid="{ED48E99E-915D-4D22-ADED-7848652FBA34}">
+                <File Id="Newtonsoft.Json.dll" KeyPath="yes" Source="$(var.BuildDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="NodaTime.dll" Guid="{196B1869-EFD1-4906-A67D-8A53D549AE05}">
+                <File Id="NodaTime.dll" KeyPath="yes" Source="$(var.BuildDir)\NodaTime.dll" />
+            </Component>
+            <Component Id="NodaTime.pdb" Guid="{FD2FC1C2-D98C-4A5F-AE26-6F317F4D30B7}">
+                <File Id="NodaTime.pdb" KeyPath="yes" Source="$(var.BuildDir)\NodaTime.pdb" />
+            </Component>
+            <Component Id="Ookii.Dialogs.Wpf.dll" Guid="{F2A88EFE-18A7-44C5-B97F-4298D44BF24A}">
+                <File Id="Ookii.Dialogs.Wpf.dll" KeyPath="yes" Source="$(var.BuildDir)\Ookii.Dialogs.Wpf.dll" />
+            </Component>
+            <Component Id="Ookii.Dialogs.Wpf.pdb" Guid="{8B22D0AC-758C-4A80-B7B3-745A26D118BE}">
+                <File Id="Ookii.Dialogs.Wpf.pdb" KeyPath="yes" Source="$(var.BuildDir)\Ookii.Dialogs.Wpf.pdb" />
+            </Component>
+            <Component Id="resources.pak" Guid="{E3687B05-050D-44B4-9DA4-7E51E3DE019D}">
+                <File Id="resources.pak" KeyPath="yes" Source="$(var.BuildDir)\resources.pak" />
+            </Component>
+            <Component Id="SQLitePCLRaw.batteries_v2.dll" Guid="{D9C95377-81AB-4F9B-BF0F-1766169CF234}">
+                <File Id="SQLitePCLRaw.batteries_v2.dll" KeyPath="yes" Source="$(var.BuildDir)\SQLitePCLRaw.batteries_v2.dll" />
+            </Component>
+            <Component Id="SQLitePCLRaw.core.dll" Guid="{CE7FC351-D7ED-4AF6-9781-FA474C270356}">
+                <File Id="SQLitePCLRaw.core.dll" KeyPath="yes" Source="$(var.BuildDir)\SQLitePCLRaw.core.dll" />
+            </Component>
+            <Component Id="SQLitePCLRaw.provider.dynamic_cdecl.dll" Guid="{A17EEFBA-16AF-45C1-83E6-7A92FE0318EB}">
+                <File Id="SQLitePCLRaw.provider.dynamic_cdecl.dll" KeyPath="yes" Source="$(var.BuildDir)\SQLitePCLRaw.provider.dynamic_cdecl.dll" />
+            </Component>
+            <Component Id="SqlServerSpatial140.dll" Guid="{6B4ACFD6-B2E6-4111-ACCF-EB9E1D459062}">
+                <File Id="SqlServerSpatial140.dll" KeyPath="yes" Source="$(var.BuildDir)\SqlServerSpatial140.dll" />
+            </Component>
+            <Component Id="SqlServerSpatial160.dll" Guid="{410C2EB4-0224-4C41-AEA5-C446E357EAE9}">
+                <File Id="SqlServerSpatial160.dll" KeyPath="yes" Source="$(var.BuildDir)\SqlServerSpatial160.dll" />
+            </Component>
+            <Component Id="Swan.dll" Guid="{B1D0A07A-167B-4068-BA8F-704546AF8C17}">
+                <File Id="Swan.dll" KeyPath="yes" Source="$(var.BuildDir)\Swan.dll" />
+            </Component>
+            <Component Id="Swan.Lite.dll" Guid="{5F0E5651-28D8-44B8-B08D-63356ADC96B2}">
+                <File Id="Swan.Lite.dll" KeyPath="yes" Source="$(var.BuildDir)\Swan.Lite.dll" />
+            </Component>
+            <Component Id="System.Buffers.dll" Guid="{90FBBC0E-B025-4AB6-9A12-9861B5FC6CFC}">
+                <File Id="System.Buffers.dll" KeyPath="yes" Source="$(var.BuildDir)\System.Buffers.dll" />
+            </Component>
+            <Component Id="System.Memory.dll" Guid="{733F9B1B-81EE-476B-9C75-E6D429ACCC2F}">
+                <File Id="System.Memory.dll" KeyPath="yes" Source="$(var.BuildDir)\System.Memory.dll" />
+            </Component>
+            <Component Id="System.Numerics.Vectors.dll" Guid="{B3626CF3-7755-4F15-8320-8C4A7478C4D6}">
+                <File Id="System.Numerics.Vectors.dll" KeyPath="yes" Source="$(var.BuildDir)\System.Numerics.Vectors.dll" />
+            </Component>
+            <Component Id="System.Runtime.CompilerServices.Unsafe.dll" Guid="{38B22228-00FC-476F-9270-57DC62724D16}">
+                <File Id="System.Runtime.CompilerServices.Unsafe.dll" KeyPath="yes" Source="$(var.BuildDir)\System.Runtime.CompilerServices.Unsafe.dll" />
+            </Component>
+            <Component Id="System.Threading.Tasks.Extensions.dll" Guid="{6C134C16-E133-4F00-9291-F8F48B0BE313}">
+                <File Id="System.Threading.Tasks.Extensions.dll" KeyPath="yes" Source="$(var.BuildDir)\System.Threading.Tasks.Extensions.dll" />
+            </Component>
+            <Component Id="System.ValueTuple.dll" Guid="{792A5949-12E2-40D5-82B1-EC68A63220F4}">
+                <File Id="System.ValueTuple.dll" KeyPath="yes" Source="$(var.BuildDir)\System.ValueTuple.dll" />
+            </Component>
+            <Component Id="v8_context_snapshot.bin" Guid="{5EC93F2E-34EC-4F3C-B986-7D5A094666D8}">
+                <File Id="v8_context_snapshot.bin" KeyPath="yes" Source="$(var.BuildDir)\v8_context_snapshot.bin" />
+            </Component>
+            <Component Id="vk_swiftshader.dll" Guid="{60EE53C5-B0D4-44BD-A946-F5CD43289A30}">
+                <File Id="vk_swiftshader.dll" KeyPath="yes" Source="$(var.BuildDir)\vk_swiftshader.dll" />
+            </Component>
+            <Component Id="vk_swiftshader_icd.json" Guid="{4940C1CF-B9BC-4E4E-9885-66D4FD873F8A}">
+                <File Id="vk_swiftshader_icd.json" KeyPath="yes" Source="$(var.BuildDir)\vk_swiftshader_icd.json" />
+            </Component>
+            <Component Id="vulkan_1.dll" Guid="{6BB2E484-3F5A-4A4A-BEE6-7656FED3E1FE}">
+                <File Id="vulkan_1.dll" KeyPath="yes" Source="$(var.BuildDir)\vulkan-1.dll" />
+            </Component>
+            <Component Id="websocket_sharp.dll" Guid="{65BEFC19-5B35-439F-A71D-808A594141FA}">
+                <File Id="websocket_sharp.dll" KeyPath="yes" Source="$(var.BuildDir)\websocket-sharp.dll" />
+            </Component>
+            <Component Id="WebView2Loader.dll" Guid="{6F17838A-7C93-4AEE-9FC5-74943A1FB4CD}">
+                <File Id="WebView2Loader.dll" KeyPath="yes" Source="$(var.BuildDir)\WebView2Loader.dll" />
+            </Component>
+            <Component Id="xibo_win64_client_README.txt" Guid="{43F61E29-831D-4C15-8337-68A4D76BC8C8}">
+                <File Id="xibo_win64_client_README.txt" KeyPath="yes" Source="$(var.BuildDir)\xibo-win64-client-README.txt" />
+            </Component>
+            <Component Id="Xibo.scr" Guid="{BD1CC38A-783F-4981-ADB8-2023ADA90E42}">
+                <File Id="Xibo.scr" KeyPath="yes" Source="$(var.BuildDir)\Xibo.scr" />
+            </Component>
+            <Component Id="Xibo.scr.config" Guid="{B88692A6-5AA3-47D4-8396-B47D37463DD0}">
+                <File Id="Xibo.scr.config" KeyPath="yes" Source="$(var.BuildDir)\Xibo.scr.config" />
+            </Component>
+            <Component Id="XiboClient.exe" Guid="{EF68667C-674E-4E00-BB60-1A3E20B6B0AB}">
+                <File Id="XiboClient.exe" KeyPath="yes" Source="$(var.BuildDir)\XiboClient.exe" />
+            </Component>
+            <Component Id="XiboClient.exe.config" Guid="{69C3C908-4EC0-4302-93EA-E19E83565CB3}">
+                <File Id="XiboClient.exe.config" KeyPath="yes" Source="$(var.BuildDir)\XiboClient.exe.config" />
+            </Component>
+            <Component Id="XiboClient.pdb" Guid="{03B2790C-403D-499E-9F16-AC07C10D9ADF}">
+                <File Id="XiboClient.pdb" KeyPath="yes" Source="$(var.BuildDir)\XiboClient.pdb" />
+            </Component>
+            <Directory Id="de" Name="de">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll" Guid="{B809E8EB-2BD4-457D-BE04-BC450A837959}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll" KeyPath="yes" Source="$(var.BuildDir)\de\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="es" Name="es">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_1" Guid="{7BEDFA69-7711-40A4-BEE2-7DBDADC1AC82}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_1" KeyPath="yes" Source="$(var.BuildDir)\es\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="fr" Name="fr">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_2" Guid="{5D02D74C-4C9F-43A4-A9CE-806F9E56C75D}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_2" KeyPath="yes" Source="$(var.BuildDir)\fr\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="it" Name="it">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_3" Guid="{4A10D22F-0522-4345-86F7-81B4679DDE28}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_3" KeyPath="yes" Source="$(var.BuildDir)\it\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="ja" Name="ja">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_4" Guid="{B8348292-9B65-403F-8410-97D6D23C0CBD}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_4" KeyPath="yes" Source="$(var.BuildDir)\ja\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="ko" Name="ko">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_5" Guid="{BA46A156-E168-4F69-A623-3474B52E7054}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_5" KeyPath="yes" Source="$(var.BuildDir)\ko\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="locales" Name="locales">
+                <Component Id="af.pak" Guid="{BD2BEFC6-3625-4C4A-98EC-7136BB10C1B4}">
+                    <File Id="af.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\af.pak" />
+                </Component>
+                <Component Id="af_FEMININE.pak" Guid="{1EE3D952-13CB-4E03-BB18-5591AA076386}">
+                    <File Id="af_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\af_FEMININE.pak" />
+                </Component>
+                <Component Id="af_MASCULINE.pak" Guid="{E215FB61-883E-4A28-A861-9D0EDAF3AF77}">
+                    <File Id="af_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\af_MASCULINE.pak" />
+                </Component>
+                <Component Id="af_NEUTER.pak" Guid="{9133E2A0-B332-4D37-8CE0-E66F021B12C4}">
+                    <File Id="af_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\af_NEUTER.pak" />
+                </Component>
+                <Component Id="am.pak" Guid="{FA46C8A8-CFB6-4A85-AF52-BABE2F73AE85}">
+                    <File Id="am.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\am.pak" />
+                </Component>
+                <Component Id="am_FEMININE.pak" Guid="{CF8FFB3C-8F63-4412-87DF-888D278B5453}">
+                    <File Id="am_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\am_FEMININE.pak" />
+                </Component>
+                <Component Id="am_MASCULINE.pak" Guid="{CB136D19-E886-4AF4-A923-834F47F59B8C}">
+                    <File Id="am_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\am_MASCULINE.pak" />
+                </Component>
+                <Component Id="am_NEUTER.pak" Guid="{0EC34CFB-F2BD-47D6-A44F-972FE3A28635}">
+                    <File Id="am_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\am_NEUTER.pak" />
+                </Component>
+                <Component Id="ar.pak" Guid="{EDD5465E-6F8F-4EFD-A8E1-56F1287EAC15}">
+                    <File Id="ar.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ar.pak" />
+                </Component>
+                <Component Id="ar_FEMININE.pak" Guid="{C308BEAB-1C30-48FF-A7D7-302FF80FEC9F}">
+                    <File Id="ar_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ar_FEMININE.pak" />
+                </Component>
+                <Component Id="ar_MASCULINE.pak" Guid="{4C995A60-094F-4C2F-B2AD-4A6D0093B5E5}">
+                    <File Id="ar_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ar_MASCULINE.pak" />
+                </Component>
+                <Component Id="ar_NEUTER.pak" Guid="{6D1FB6D5-1413-482F-828E-6BD541A2AB00}">
+                    <File Id="ar_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ar_NEUTER.pak" />
+                </Component>
+                <Component Id="bg.pak" Guid="{831CBCEC-515B-4BBA-947D-B658A0352F07}">
+                    <File Id="bg.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bg.pak" />
+                </Component>
+                <Component Id="bg_FEMININE.pak" Guid="{ED786F89-2A86-433F-B30F-C7436B74843C}">
+                    <File Id="bg_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bg_FEMININE.pak" />
+                </Component>
+                <Component Id="bg_MASCULINE.pak" Guid="{3D62B32A-5876-41CF-9352-E29C7EC4EE53}">
+                    <File Id="bg_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bg_MASCULINE.pak" />
+                </Component>
+                <Component Id="bg_NEUTER.pak" Guid="{A576D30F-894E-4C29-9218-4F6C06346B8B}">
+                    <File Id="bg_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bg_NEUTER.pak" />
+                </Component>
+                <Component Id="bn.pak" Guid="{C3290578-25EA-4743-8ED3-18A48F17F85D}">
+                    <File Id="bn.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bn.pak" />
+                </Component>
+                <Component Id="bn_FEMININE.pak" Guid="{E0A834F0-DD55-430F-9B71-63B7C28ED76E}">
+                    <File Id="bn_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bn_FEMININE.pak" />
+                </Component>
+                <Component Id="bn_MASCULINE.pak" Guid="{B87A9F80-0FBC-407A-A92E-E8C998DA5A35}">
+                    <File Id="bn_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bn_MASCULINE.pak" />
+                </Component>
+                <Component Id="bn_NEUTER.pak" Guid="{0F5D6A3C-F8FD-455E-9CE5-EE127A05317A}">
+                    <File Id="bn_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\bn_NEUTER.pak" />
+                </Component>
+                <Component Id="ca.pak" Guid="{65FADD76-661E-405A-9129-5819720C4A10}">
+                    <File Id="ca.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ca.pak" />
+                </Component>
+                <Component Id="ca_FEMININE.pak" Guid="{6919133F-B058-4E99-963B-9428353C719A}">
+                    <File Id="ca_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ca_FEMININE.pak" />
+                </Component>
+                <Component Id="ca_MASCULINE.pak" Guid="{3BB15B44-60EE-4EB8-B212-8F19770C816E}">
+                    <File Id="ca_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ca_MASCULINE.pak" />
+                </Component>
+                <Component Id="ca_NEUTER.pak" Guid="{F22D3F09-E5F4-495B-857C-EAFBFC426D2F}">
+                    <File Id="ca_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ca_NEUTER.pak" />
+                </Component>
+                <Component Id="cs.pak" Guid="{C2A0CC93-D553-4C9C-AD86-C80D2468240D}">
+                    <File Id="cs.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\cs.pak" />
+                </Component>
+                <Component Id="cs_FEMININE.pak" Guid="{51036DA9-2A3E-425F-B78A-EFDAB7B9A184}">
+                    <File Id="cs_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\cs_FEMININE.pak" />
+                </Component>
+                <Component Id="cs_MASCULINE.pak" Guid="{BE9BFBD7-2194-4F62-957F-AFF316069FAD}">
+                    <File Id="cs_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\cs_MASCULINE.pak" />
+                </Component>
+                <Component Id="cs_NEUTER.pak" Guid="{117539CA-660C-460F-B91B-786B28F49DA5}">
+                    <File Id="cs_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\cs_NEUTER.pak" />
+                </Component>
+                <Component Id="da.pak" Guid="{3A51A09B-9BB6-4334-8351-E336E3940BE5}">
+                    <File Id="da.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\da.pak" />
+                </Component>
+                <Component Id="da_FEMININE.pak" Guid="{6CCBC115-9C02-478E-B46D-C24E1451122B}">
+                    <File Id="da_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\da_FEMININE.pak" />
+                </Component>
+                <Component Id="da_MASCULINE.pak" Guid="{1EDF83C0-F2F1-46D5-A508-1F7E3DC559FC}">
+                    <File Id="da_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\da_MASCULINE.pak" />
+                </Component>
+                <Component Id="da_NEUTER.pak" Guid="{02856565-3584-4EFD-AD82-0F5292A5FC6C}">
+                    <File Id="da_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\da_NEUTER.pak" />
+                </Component>
+                <Component Id="de.pak" Guid="{0DD59FD1-70A0-4B6E-A6B2-9D9FEB347220}">
+                    <File Id="de.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\de.pak" />
+                </Component>
+                <Component Id="de_FEMININE.pak" Guid="{D3E4382D-70D0-41E0-93F1-93B3379A7FFE}">
+                    <File Id="de_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\de_FEMININE.pak" />
+                </Component>
+                <Component Id="de_MASCULINE.pak" Guid="{003F56C4-3E89-419A-9C58-224DDD7CC436}">
+                    <File Id="de_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\de_MASCULINE.pak" />
+                </Component>
+                <Component Id="de_NEUTER.pak" Guid="{3D92B045-7DF7-4E33-A033-7B6D32E1ABAD}">
+                    <File Id="de_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\de_NEUTER.pak" />
+                </Component>
+                <Component Id="el.pak" Guid="{B90A9DDF-FEDA-410C-9885-509F49BA5586}">
+                    <File Id="el.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\el.pak" />
+                </Component>
+                <Component Id="el_FEMININE.pak" Guid="{9E864CD4-D3C4-4571-BDD8-1B1111A7F7AB}">
+                    <File Id="el_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\el_FEMININE.pak" />
+                </Component>
+                <Component Id="el_MASCULINE.pak" Guid="{65337F3B-0BEE-4B93-8DD2-9338E20B9FA3}">
+                    <File Id="el_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\el_MASCULINE.pak" />
+                </Component>
+                <Component Id="el_NEUTER.pak" Guid="{06E5159E-AE53-43B0-A1EC-BBEEC091C13F}">
+                    <File Id="el_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\el_NEUTER.pak" />
+                </Component>
+                <Component Id="en_GB.pak" Guid="{7BEC3F15-1B61-4EFF-84AE-4E06D33F2306}">
+                    <File Id="en_GB.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-GB.pak" />
+                </Component>
+                <Component Id="en_GB_FEMININE.pak" Guid="{CA682924-FF21-4853-BC62-D2ED15E9D563}">
+                    <File Id="en_GB_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-GB_FEMININE.pak" />
+                </Component>
+                <Component Id="en_GB_MASCULINE.pak" Guid="{5955ECAD-A216-4CE2-880E-BA946399B98E}">
+                    <File Id="en_GB_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-GB_MASCULINE.pak" />
+                </Component>
+                <Component Id="en_GB_NEUTER.pak" Guid="{85794D05-BB95-45A2-8B67-D6D5A243FED7}">
+                    <File Id="en_GB_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-GB_NEUTER.pak" />
+                </Component>
+                <Component Id="en_US.pak" Guid="{0F83C029-253C-4744-9BF4-EDB66C1072CE}">
+                    <File Id="en_US.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-US.pak" />
+                </Component>
+                <Component Id="en_US_FEMININE.pak" Guid="{23D7676C-3323-44E3-AD3E-F00448604E87}">
+                    <File Id="en_US_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-US_FEMININE.pak" />
+                </Component>
+                <Component Id="en_US_MASCULINE.pak" Guid="{3233B5F5-9799-4E1A-89F6-1B7315790166}">
+                    <File Id="en_US_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-US_MASCULINE.pak" />
+                </Component>
+                <Component Id="en_US_NEUTER.pak" Guid="{F78A34F9-96E3-457F-A493-00F03302DEED}">
+                    <File Id="en_US_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\en-US_NEUTER.pak" />
+                </Component>
+                <Component Id="es_419.pak" Guid="{8C87E21F-205F-4B9B-B853-BD9F8E49B6A8}">
+                    <File Id="es_419.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es-419.pak" />
+                </Component>
+                <Component Id="es_419_FEMININE.pak" Guid="{E8AA3861-5943-470F-9743-716865723771}">
+                    <File Id="es_419_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es-419_FEMININE.pak" />
+                </Component>
+                <Component Id="es_419_MASCULINE.pak" Guid="{1A6603B2-DD1C-45B8-AC4E-7B6E75094B63}">
+                    <File Id="es_419_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es-419_MASCULINE.pak" />
+                </Component>
+                <Component Id="es_419_NEUTER.pak" Guid="{886818AF-5949-41C5-B7D8-AFBDC8B48285}">
+                    <File Id="es_419_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es-419_NEUTER.pak" />
+                </Component>
+                <Component Id="es.pak" Guid="{79C90B60-673D-46BB-91A8-38E4F7B9FDFC}">
+                    <File Id="es.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es.pak" />
+                </Component>
+                <Component Id="es_FEMININE.pak" Guid="{C22DEAEF-980D-4313-AC91-FF8322A91A35}">
+                    <File Id="es_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es_FEMININE.pak" />
+                </Component>
+                <Component Id="es_MASCULINE.pak" Guid="{3A3773E4-22B4-4A80-ADD8-A616A37856F6}">
+                    <File Id="es_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es_MASCULINE.pak" />
+                </Component>
+                <Component Id="es_NEUTER.pak" Guid="{AB94379A-C8A6-4FF6-AF99-128598A1FAC8}">
+                    <File Id="es_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\es_NEUTER.pak" />
+                </Component>
+                <Component Id="et.pak" Guid="{B97E488E-132E-4D7A-BD0C-AD01BFCA83CF}">
+                    <File Id="et.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\et.pak" />
+                </Component>
+                <Component Id="et_FEMININE.pak" Guid="{B4481733-9CFC-420C-A79F-A2CF8258EF83}">
+                    <File Id="et_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\et_FEMININE.pak" />
+                </Component>
+                <Component Id="et_MASCULINE.pak" Guid="{65558A2B-5DD8-43F2-84BE-A5BD28B00215}">
+                    <File Id="et_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\et_MASCULINE.pak" />
+                </Component>
+                <Component Id="et_NEUTER.pak" Guid="{085823C5-A160-4F10-BDBC-8FD6F87E0F31}">
+                    <File Id="et_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\et_NEUTER.pak" />
+                </Component>
+                <Component Id="fa.pak" Guid="{141BA367-8670-4DAE-902F-A13BA5DEC7F4}">
+                    <File Id="fa.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fa.pak" />
+                </Component>
+                <Component Id="fa_FEMININE.pak" Guid="{4DAC9AAC-C742-49A8-ABF4-0D9CA233D0A6}">
+                    <File Id="fa_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fa_FEMININE.pak" />
+                </Component>
+                <Component Id="fa_MASCULINE.pak" Guid="{3861E750-0DD8-4639-94DE-8B6D25EB62D1}">
+                    <File Id="fa_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fa_MASCULINE.pak" />
+                </Component>
+                <Component Id="fa_NEUTER.pak" Guid="{B0D0580A-F2BD-43FE-84E3-2E8BF1AF9972}">
+                    <File Id="fa_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fa_NEUTER.pak" />
+                </Component>
+                <Component Id="fi.pak" Guid="{0764AC08-80D6-45A0-AB23-798E63518DC1}">
+                    <File Id="fi.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fi.pak" />
+                </Component>
+                <Component Id="fil.pak" Guid="{3CF02E71-4BFE-4461-A922-A659A1821712}">
+                    <File Id="fil.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fil.pak" />
+                </Component>
+                <Component Id="fil_FEMININE.pak" Guid="{70B279DD-E607-4B7F-91AC-A8FF6279CBDB}">
+                    <File Id="fil_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fil_FEMININE.pak" />
+                </Component>
+                <Component Id="fil_MASCULINE.pak" Guid="{343B3673-C0A6-4B97-949D-CA8CCB46DC42}">
+                    <File Id="fil_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fil_MASCULINE.pak" />
+                </Component>
+                <Component Id="fil_NEUTER.pak" Guid="{3A41A1B1-5148-4196-A525-C8DDB49A415C}">
+                    <File Id="fil_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fil_NEUTER.pak" />
+                </Component>
+                <Component Id="fi_FEMININE.pak" Guid="{5CAA27A2-2B50-440E-A54B-7C80FE29E870}">
+                    <File Id="fi_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fi_FEMININE.pak" />
+                </Component>
+                <Component Id="fi_MASCULINE.pak" Guid="{E10940B7-C605-4E91-90B7-3E202CDB09F9}">
+                    <File Id="fi_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fi_MASCULINE.pak" />
+                </Component>
+                <Component Id="fi_NEUTER.pak" Guid="{44138E4E-A2A4-459B-9C62-7ECACAF63CCD}">
+                    <File Id="fi_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fi_NEUTER.pak" />
+                </Component>
+                <Component Id="fr.pak" Guid="{3FE51738-86D5-4623-9090-F1183B2C4A0E}">
+                    <File Id="fr.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fr.pak" />
+                </Component>
+                <Component Id="fr_FEMININE.pak" Guid="{9D4A258B-6524-4356-A3BA-D1D1313A46F6}">
+                    <File Id="fr_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fr_FEMININE.pak" />
+                </Component>
+                <Component Id="fr_MASCULINE.pak" Guid="{F59A4DAD-9777-428F-BB7C-3F6C9F7423A3}">
+                    <File Id="fr_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fr_MASCULINE.pak" />
+                </Component>
+                <Component Id="fr_NEUTER.pak" Guid="{61B3068A-AD66-4393-9274-F15EED330581}">
+                    <File Id="fr_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\fr_NEUTER.pak" />
+                </Component>
+                <Component Id="gu.pak" Guid="{53FC8503-D0B3-493F-8968-E7A7442DDB23}">
+                    <File Id="gu.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\gu.pak" />
+                </Component>
+                <Component Id="gu_FEMININE.pak" Guid="{89467BB3-DA5F-4648-95AE-F190D86FA8BD}">
+                    <File Id="gu_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\gu_FEMININE.pak" />
+                </Component>
+                <Component Id="gu_MASCULINE.pak" Guid="{19F2E9E3-8B8F-4D66-A992-A7C2FB269825}">
+                    <File Id="gu_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\gu_MASCULINE.pak" />
+                </Component>
+                <Component Id="gu_NEUTER.pak" Guid="{2DEFF741-B108-45FD-A4ED-F0DAA45CB7F7}">
+                    <File Id="gu_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\gu_NEUTER.pak" />
+                </Component>
+                <Component Id="he.pak" Guid="{53FA88E7-4902-4AF4-8775-23747153C931}">
+                    <File Id="he.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\he.pak" />
+                </Component>
+                <Component Id="he_FEMININE.pak" Guid="{9AC58241-7A04-4001-A49E-A6A7B349C0A0}">
+                    <File Id="he_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\he_FEMININE.pak" />
+                </Component>
+                <Component Id="he_MASCULINE.pak" Guid="{2FAC0972-AE99-4D88-939C-A1E50E2F0BF7}">
+                    <File Id="he_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\he_MASCULINE.pak" />
+                </Component>
+                <Component Id="he_NEUTER.pak" Guid="{9D577399-356F-4C02-B8BB-10B2322FEE5D}">
+                    <File Id="he_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\he_NEUTER.pak" />
+                </Component>
+                <Component Id="hi.pak" Guid="{065DA012-9A88-472E-8F4D-ED052272BD20}">
+                    <File Id="hi.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hi.pak" />
+                </Component>
+                <Component Id="hi_FEMININE.pak" Guid="{1029BD9F-4209-4B7E-A054-B2CC4BAD51E6}">
+                    <File Id="hi_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hi_FEMININE.pak" />
+                </Component>
+                <Component Id="hi_MASCULINE.pak" Guid="{21E44F95-7F86-4C44-8C2D-C119741CE1F1}">
+                    <File Id="hi_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hi_MASCULINE.pak" />
+                </Component>
+                <Component Id="hi_NEUTER.pak" Guid="{DE942DA6-DBD2-4B60-97B5-AF852487474E}">
+                    <File Id="hi_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hi_NEUTER.pak" />
+                </Component>
+                <Component Id="hr.pak" Guid="{75BB786D-A54C-42A2-A17E-20A548F18350}">
+                    <File Id="hr.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hr.pak" />
+                </Component>
+                <Component Id="hr_FEMININE.pak" Guid="{47DC3E65-2F52-4BD7-9E60-FF74463996F3}">
+                    <File Id="hr_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hr_FEMININE.pak" />
+                </Component>
+                <Component Id="hr_MASCULINE.pak" Guid="{75D737C7-5FAE-4E74-B486-EA02C3233FEA}">
+                    <File Id="hr_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hr_MASCULINE.pak" />
+                </Component>
+                <Component Id="hr_NEUTER.pak" Guid="{C94D8680-27CB-414A-B71A-628B58478895}">
+                    <File Id="hr_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hr_NEUTER.pak" />
+                </Component>
+                <Component Id="hu.pak" Guid="{70A994D3-AC63-40CA-AC84-2791BD41CFA9}">
+                    <File Id="hu.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hu.pak" />
+                </Component>
+                <Component Id="hu_FEMININE.pak" Guid="{D603D3FD-646D-487D-B06B-4DE48E97FBEE}">
+                    <File Id="hu_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hu_FEMININE.pak" />
+                </Component>
+                <Component Id="hu_MASCULINE.pak" Guid="{19B6F919-01C2-448C-98FE-3F632B550064}">
+                    <File Id="hu_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hu_MASCULINE.pak" />
+                </Component>
+                <Component Id="hu_NEUTER.pak" Guid="{917C2F29-993D-4C40-9BC9-C3F097120AF4}">
+                    <File Id="hu_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\hu_NEUTER.pak" />
+                </Component>
+                <Component Id="id.pak" Guid="{FDA994C6-03F9-4649-951D-9CFE69710148}">
+                    <File Id="id.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\id.pak" />
+                </Component>
+                <Component Id="id_FEMININE.pak" Guid="{E4FE54A8-F57F-42F9-B38B-0C30768D0CD4}">
+                    <File Id="id_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\id_FEMININE.pak" />
+                </Component>
+                <Component Id="id_MASCULINE.pak" Guid="{8DA26CEA-F20B-4651-9069-F24B42F1AF0B}">
+                    <File Id="id_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\id_MASCULINE.pak" />
+                </Component>
+                <Component Id="id_NEUTER.pak" Guid="{FD44388E-4C1D-4523-8EA2-A5ACC8AC8E10}">
+                    <File Id="id_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\id_NEUTER.pak" />
+                </Component>
+                <Component Id="it.pak" Guid="{A11DF808-957B-48E3-BD77-73830887AD7F}">
+                    <File Id="it.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\it.pak" />
+                </Component>
+                <Component Id="it_FEMININE.pak" Guid="{24897260-B4CE-4A3F-A392-BA6D9EB47996}">
+                    <File Id="it_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\it_FEMININE.pak" />
+                </Component>
+                <Component Id="it_MASCULINE.pak" Guid="{D7D37D89-D455-4193-8BB9-73ECFAE25A10}">
+                    <File Id="it_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\it_MASCULINE.pak" />
+                </Component>
+                <Component Id="it_NEUTER.pak" Guid="{FC34EDFE-C8A1-4A33-8C16-5F888B35147A}">
+                    <File Id="it_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\it_NEUTER.pak" />
+                </Component>
+                <Component Id="ja.pak" Guid="{B7FCF14C-2E87-4931-98A1-029382BE5A3B}">
+                    <File Id="ja.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ja.pak" />
+                </Component>
+                <Component Id="ja_FEMININE.pak" Guid="{2464952E-3A27-4B86-AA96-79EEA9AFE4CF}">
+                    <File Id="ja_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ja_FEMININE.pak" />
+                </Component>
+                <Component Id="ja_MASCULINE.pak" Guid="{688DEB80-5A08-4DC6-BEF3-B1B0BBC4CBCB}">
+                    <File Id="ja_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ja_MASCULINE.pak" />
+                </Component>
+                <Component Id="ja_NEUTER.pak" Guid="{2239D0F1-A014-4C73-B287-BDF7C6D9A037}">
+                    <File Id="ja_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ja_NEUTER.pak" />
+                </Component>
+                <Component Id="kn.pak" Guid="{05066702-6C68-4C28-86F2-4B7597FAD569}">
+                    <File Id="kn.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\kn.pak" />
+                </Component>
+                <Component Id="kn_FEMININE.pak" Guid="{85B5F40D-04EF-4F57-924D-E0FA8A33167D}">
+                    <File Id="kn_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\kn_FEMININE.pak" />
+                </Component>
+                <Component Id="kn_MASCULINE.pak" Guid="{EDA46529-BB76-4BDE-BD12-C1E76CB6D671}">
+                    <File Id="kn_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\kn_MASCULINE.pak" />
+                </Component>
+                <Component Id="kn_NEUTER.pak" Guid="{151AF760-02D9-46CD-B78B-FCC61E63A30D}">
+                    <File Id="kn_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\kn_NEUTER.pak" />
+                </Component>
+                <Component Id="ko.pak" Guid="{EA1E6060-BDAD-42D2-8D01-1137FB99F2D6}">
+                    <File Id="ko.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ko.pak" />
+                </Component>
+                <Component Id="ko_FEMININE.pak" Guid="{54D85B44-562A-475A-AA4D-B30AB477D3BC}">
+                    <File Id="ko_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ko_FEMININE.pak" />
+                </Component>
+                <Component Id="ko_MASCULINE.pak" Guid="{46E49BAF-3AC2-4626-B783-1B04A369A2B4}">
+                    <File Id="ko_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ko_MASCULINE.pak" />
+                </Component>
+                <Component Id="ko_NEUTER.pak" Guid="{430F1F6D-29CD-4D16-9349-716D73E31BAB}">
+                    <File Id="ko_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ko_NEUTER.pak" />
+                </Component>
+                <Component Id="lt.pak" Guid="{750B4427-5841-44E5-B01D-29601A0EFCFE}">
+                    <File Id="lt.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lt.pak" />
+                </Component>
+                <Component Id="lt_FEMININE.pak" Guid="{F77A1538-324A-4D26-A086-9D89C69D7378}">
+                    <File Id="lt_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lt_FEMININE.pak" />
+                </Component>
+                <Component Id="lt_MASCULINE.pak" Guid="{2632F9A0-B7F5-456C-BA12-55343B422A68}">
+                    <File Id="lt_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lt_MASCULINE.pak" />
+                </Component>
+                <Component Id="lt_NEUTER.pak" Guid="{5E82FE79-1137-4303-B6E0-A6EBCED1FDFF}">
+                    <File Id="lt_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lt_NEUTER.pak" />
+                </Component>
+                <Component Id="lv.pak" Guid="{73E2CB36-A05E-4C6D-8F61-DE2BB63792C5}">
+                    <File Id="lv.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lv.pak" />
+                </Component>
+                <Component Id="lv_FEMININE.pak" Guid="{FCC20995-4A0C-42CD-B9F6-CE2DBBF088C1}">
+                    <File Id="lv_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lv_FEMININE.pak" />
+                </Component>
+                <Component Id="lv_MASCULINE.pak" Guid="{013004F5-3809-4616-9CAD-2F51F7E153A8}">
+                    <File Id="lv_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lv_MASCULINE.pak" />
+                </Component>
+                <Component Id="lv_NEUTER.pak" Guid="{551E931C-FAF3-4897-81F7-5E03FF28448C}">
+                    <File Id="lv_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\lv_NEUTER.pak" />
+                </Component>
+                <Component Id="ml.pak" Guid="{A460B06E-F2A6-408C-A9D5-455AF53F1B7C}">
+                    <File Id="ml.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ml.pak" />
+                </Component>
+                <Component Id="ml_FEMININE.pak" Guid="{49E6FF88-BEA5-4E12-934F-49621E547B27}">
+                    <File Id="ml_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ml_FEMININE.pak" />
+                </Component>
+                <Component Id="ml_MASCULINE.pak" Guid="{D19D0E40-1A19-44C5-8B04-F1F161573E98}">
+                    <File Id="ml_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ml_MASCULINE.pak" />
+                </Component>
+                <Component Id="ml_NEUTER.pak" Guid="{B73F78F1-44A2-49CF-882F-F1B5F12F1E1B}">
+                    <File Id="ml_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ml_NEUTER.pak" />
+                </Component>
+                <Component Id="mr.pak" Guid="{4739E6A1-87C7-4215-85FE-2EC0FFD05401}">
+                    <File Id="mr.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\mr.pak" />
+                </Component>
+                <Component Id="mr_FEMININE.pak" Guid="{086A47CD-44F2-4D6B-A706-A8EAED0DD765}">
+                    <File Id="mr_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\mr_FEMININE.pak" />
+                </Component>
+                <Component Id="mr_MASCULINE.pak" Guid="{D41D1F70-59F3-4901-80DA-E8FB6E9B4F7E}">
+                    <File Id="mr_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\mr_MASCULINE.pak" />
+                </Component>
+                <Component Id="mr_NEUTER.pak" Guid="{62A6D9BF-F2C0-4637-A59B-84716F7AB2B9}">
+                    <File Id="mr_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\mr_NEUTER.pak" />
+                </Component>
+                <Component Id="ms.pak" Guid="{06048A04-BC51-4BB9-A960-72646E77CD40}">
+                    <File Id="ms.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ms.pak" />
+                </Component>
+                <Component Id="ms_FEMININE.pak" Guid="{412C2200-78DA-4357-B0CE-2E00A446CE88}">
+                    <File Id="ms_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ms_FEMININE.pak" />
+                </Component>
+                <Component Id="ms_MASCULINE.pak" Guid="{3A9A4650-D3EC-4B6C-9509-657B8DAB4E6B}">
+                    <File Id="ms_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ms_MASCULINE.pak" />
+                </Component>
+                <Component Id="ms_NEUTER.pak" Guid="{5FD1E985-2E5E-4CE7-83B5-84F9152F119C}">
+                    <File Id="ms_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ms_NEUTER.pak" />
+                </Component>
+                <Component Id="nb.pak" Guid="{ECCB0448-1D32-41BB-B437-0EEEF38A2414}">
+                    <File Id="nb.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nb.pak" />
+                </Component>
+                <Component Id="nb_FEMININE.pak" Guid="{35C6F768-65D1-4EC5-8DB9-E76BAAB34D47}">
+                    <File Id="nb_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nb_FEMININE.pak" />
+                </Component>
+                <Component Id="nb_MASCULINE.pak" Guid="{BC769B48-80D1-42CF-ACC9-E3DFCB1CD9FE}">
+                    <File Id="nb_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nb_MASCULINE.pak" />
+                </Component>
+                <Component Id="nb_NEUTER.pak" Guid="{93B8E155-124D-4708-B659-8E82F71C69FA}">
+                    <File Id="nb_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nb_NEUTER.pak" />
+                </Component>
+                <Component Id="nl.pak" Guid="{ECBC2DA2-4C65-46D6-AEBF-BA530E267E4A}">
+                    <File Id="nl.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nl.pak" />
+                </Component>
+                <Component Id="nl_FEMININE.pak" Guid="{31CBB9B3-A31C-4CC4-9381-8B43B8F90949}">
+                    <File Id="nl_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nl_FEMININE.pak" />
+                </Component>
+                <Component Id="nl_MASCULINE.pak" Guid="{71E8CD87-654D-490F-8793-C6809843CAC6}">
+                    <File Id="nl_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nl_MASCULINE.pak" />
+                </Component>
+                <Component Id="nl_NEUTER.pak" Guid="{93AD859D-AB4C-4C07-90A4-3C60D8D0EB8E}">
+                    <File Id="nl_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\nl_NEUTER.pak" />
+                </Component>
+                <Component Id="pl.pak" Guid="{FA7264D3-972E-46E4-A1E3-7A664C190868}">
+                    <File Id="pl.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pl.pak" />
+                </Component>
+                <Component Id="pl_FEMININE.pak" Guid="{2662AA34-42CB-4D14-A136-235206D7275E}">
+                    <File Id="pl_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pl_FEMININE.pak" />
+                </Component>
+                <Component Id="pl_MASCULINE.pak" Guid="{EE544690-9B79-42B6-9138-724E0E7D87D0}">
+                    <File Id="pl_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pl_MASCULINE.pak" />
+                </Component>
+                <Component Id="pl_NEUTER.pak" Guid="{74AA7170-AD11-40CF-8807-C056560EB84D}">
+                    <File Id="pl_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pl_NEUTER.pak" />
+                </Component>
+                <Component Id="pt_BR.pak" Guid="{4B331BFC-80DA-41F3-BB12-8D84B7917D9F}">
+                    <File Id="pt_BR.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-BR.pak" />
+                </Component>
+                <Component Id="pt_BR_FEMININE.pak" Guid="{2BE44850-BA12-45D7-9F62-FEA88A78FBEA}">
+                    <File Id="pt_BR_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-BR_FEMININE.pak" />
+                </Component>
+                <Component Id="pt_BR_MASCULINE.pak" Guid="{D24585AC-BEF6-44EE-8A3F-80030034B854}">
+                    <File Id="pt_BR_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-BR_MASCULINE.pak" />
+                </Component>
+                <Component Id="pt_BR_NEUTER.pak" Guid="{BDA0EE10-4F36-4D7F-986B-A0CDA40D0461}">
+                    <File Id="pt_BR_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-BR_NEUTER.pak" />
+                </Component>
+                <Component Id="pt_PT.pak" Guid="{34A3D2D1-068F-4A11-9E7F-B1B9200F96B1}">
+                    <File Id="pt_PT.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-PT.pak" />
+                </Component>
+                <Component Id="pt_PT_FEMININE.pak" Guid="{54910D94-48F5-49BD-A926-E91936EDF4D1}">
+                    <File Id="pt_PT_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-PT_FEMININE.pak" />
+                </Component>
+                <Component Id="pt_PT_MASCULINE.pak" Guid="{C500EDBD-8F56-40C1-A222-B16838BA0034}">
+                    <File Id="pt_PT_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-PT_MASCULINE.pak" />
+                </Component>
+                <Component Id="pt_PT_NEUTER.pak" Guid="{AFF25908-C209-4334-AF5B-D1FA2752CDB9}">
+                    <File Id="pt_PT_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\pt-PT_NEUTER.pak" />
+                </Component>
+                <Component Id="ro.pak" Guid="{7F3B3007-16FF-4D07-A5DA-C635B0710B3B}">
+                    <File Id="ro.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ro.pak" />
+                </Component>
+                <Component Id="ro_FEMININE.pak" Guid="{6F1D91C4-487C-4E6C-A0B4-A3F4D59AF9B8}">
+                    <File Id="ro_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ro_FEMININE.pak" />
+                </Component>
+                <Component Id="ro_MASCULINE.pak" Guid="{8A3AA937-EB3F-4E5C-944F-5AA8CC11DE07}">
+                    <File Id="ro_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ro_MASCULINE.pak" />
+                </Component>
+                <Component Id="ro_NEUTER.pak" Guid="{5F74844E-30B1-4B9D-B048-0FBC2B86CEF6}">
+                    <File Id="ro_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ro_NEUTER.pak" />
+                </Component>
+                <Component Id="ru.pak" Guid="{5D13BBD1-1E07-4691-8499-A726660BB401}">
+                    <File Id="ru.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ru.pak" />
+                </Component>
+                <Component Id="ru_FEMININE.pak" Guid="{7429699C-A95A-49D8-B2EC-FEE085F704E4}">
+                    <File Id="ru_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ru_FEMININE.pak" />
+                </Component>
+                <Component Id="ru_MASCULINE.pak" Guid="{DADA001C-4A6E-4331-BA5B-82C7CE3C6B2A}">
+                    <File Id="ru_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ru_MASCULINE.pak" />
+                </Component>
+                <Component Id="ru_NEUTER.pak" Guid="{2A38F655-F7F0-495E-96CD-0ABAB2054A28}">
+                    <File Id="ru_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ru_NEUTER.pak" />
+                </Component>
+                <Component Id="sk.pak" Guid="{AB74D783-B18C-4B16-B145-8C9A9CFDCB95}">
+                    <File Id="sk.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sk.pak" />
+                </Component>
+                <Component Id="sk_FEMININE.pak" Guid="{51ABEABB-4F98-4A65-8DBA-2595941E4CD1}">
+                    <File Id="sk_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sk_FEMININE.pak" />
+                </Component>
+                <Component Id="sk_MASCULINE.pak" Guid="{C8070CB5-A526-42B1-A156-B6904C6CF830}">
+                    <File Id="sk_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sk_MASCULINE.pak" />
+                </Component>
+                <Component Id="sk_NEUTER.pak" Guid="{C82C71B1-599D-4AC8-99D5-0FABA49D6440}">
+                    <File Id="sk_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sk_NEUTER.pak" />
+                </Component>
+                <Component Id="sl.pak" Guid="{91C97FD4-18C8-4E15-8D8C-93B94C6B3A6C}">
+                    <File Id="sl.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sl.pak" />
+                </Component>
+                <Component Id="sl_FEMININE.pak" Guid="{63171794-CDA0-4017-98ED-3B39C71D3E89}">
+                    <File Id="sl_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sl_FEMININE.pak" />
+                </Component>
+                <Component Id="sl_MASCULINE.pak" Guid="{1F98E4F4-FD7D-4A51-A817-5C4F7FA282E6}">
+                    <File Id="sl_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sl_MASCULINE.pak" />
+                </Component>
+                <Component Id="sl_NEUTER.pak" Guid="{4456860E-AD53-46E7-854E-34EC7F46D50E}">
+                    <File Id="sl_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sl_NEUTER.pak" />
+                </Component>
+                <Component Id="sr.pak" Guid="{8AC99357-F2DD-4194-A422-D327E49D374E}">
+                    <File Id="sr.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sr.pak" />
+                </Component>
+                <Component Id="sr_FEMININE.pak" Guid="{29CBCA38-D984-4720-914F-0C31E99CFB15}">
+                    <File Id="sr_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sr_FEMININE.pak" />
+                </Component>
+                <Component Id="sr_MASCULINE.pak" Guid="{8D62B099-877D-4E69-B901-5932D29CAFA9}">
+                    <File Id="sr_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sr_MASCULINE.pak" />
+                </Component>
+                <Component Id="sr_NEUTER.pak" Guid="{5AFA745E-C05C-4D28-BBF3-CEC9ABBAB0D7}">
+                    <File Id="sr_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sr_NEUTER.pak" />
+                </Component>
+                <Component Id="sv.pak" Guid="{ABEE03FE-4749-4CF6-BB69-CEC385276A0E}">
+                    <File Id="sv.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sv.pak" />
+                </Component>
+                <Component Id="sv_FEMININE.pak" Guid="{3A8038F3-ECEB-4341-9720-1B916CF3801F}">
+                    <File Id="sv_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sv_FEMININE.pak" />
+                </Component>
+                <Component Id="sv_MASCULINE.pak" Guid="{2EA52E81-649E-4CE4-AB22-B00E8C9E5D7A}">
+                    <File Id="sv_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sv_MASCULINE.pak" />
+                </Component>
+                <Component Id="sv_NEUTER.pak" Guid="{DCFBE627-3A10-4B1A-9681-4F012B26EA8A}">
+                    <File Id="sv_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sv_NEUTER.pak" />
+                </Component>
+                <Component Id="sw.pak" Guid="{0F8C40FB-F2B3-45BA-91BD-DAC8C7EBD65F}">
+                    <File Id="sw.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sw.pak" />
+                </Component>
+                <Component Id="sw_FEMININE.pak" Guid="{BB031F79-2ADC-4DDB-8406-956A6CF82E4A}">
+                    <File Id="sw_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sw_FEMININE.pak" />
+                </Component>
+                <Component Id="sw_MASCULINE.pak" Guid="{2498E4C6-7377-46FD-8E5E-1729257C8415}">
+                    <File Id="sw_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sw_MASCULINE.pak" />
+                </Component>
+                <Component Id="sw_NEUTER.pak" Guid="{C5B68421-B4FF-48DC-BEDE-0A88F52CB37E}">
+                    <File Id="sw_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\sw_NEUTER.pak" />
+                </Component>
+                <Component Id="ta.pak" Guid="{44FE3BE8-A9EF-42DC-8FD7-039DF76C84B4}">
+                    <File Id="ta.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ta.pak" />
+                </Component>
+                <Component Id="ta_FEMININE.pak" Guid="{D1FF8B1F-2096-4B41-AE1D-CBEB8CA7C666}">
+                    <File Id="ta_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ta_FEMININE.pak" />
+                </Component>
+                <Component Id="ta_MASCULINE.pak" Guid="{20E4B53E-7F23-4EE9-9DD2-7119EA26D450}">
+                    <File Id="ta_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ta_MASCULINE.pak" />
+                </Component>
+                <Component Id="ta_NEUTER.pak" Guid="{6A4B2355-D619-48EE-8E53-B28FE06D6BA6}">
+                    <File Id="ta_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ta_NEUTER.pak" />
+                </Component>
+                <Component Id="te.pak" Guid="{CB15853B-BDA8-4BBA-9E6E-2BBF57BB4DE2}">
+                    <File Id="te.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\te.pak" />
+                </Component>
+                <Component Id="te_FEMININE.pak" Guid="{09E4754A-9B55-47A2-8E44-EB8937A392C2}">
+                    <File Id="te_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\te_FEMININE.pak" />
+                </Component>
+                <Component Id="te_MASCULINE.pak" Guid="{1BB26F2E-0421-45E8-8C84-9625F9B556E6}">
+                    <File Id="te_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\te_MASCULINE.pak" />
+                </Component>
+                <Component Id="te_NEUTER.pak" Guid="{96FB860F-37DF-4EAA-B175-85CF9200938E}">
+                    <File Id="te_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\te_NEUTER.pak" />
+                </Component>
+                <Component Id="th.pak" Guid="{E022BDCA-ADAE-4FAD-B663-B0A15C59D29E}">
+                    <File Id="th.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\th.pak" />
+                </Component>
+                <Component Id="th_FEMININE.pak" Guid="{A89A31A7-E963-4D3B-B7F1-8B1D7BEFF676}">
+                    <File Id="th_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\th_FEMININE.pak" />
+                </Component>
+                <Component Id="th_MASCULINE.pak" Guid="{435988AF-78D9-4B0C-8924-7369C5CAE8B5}">
+                    <File Id="th_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\th_MASCULINE.pak" />
+                </Component>
+                <Component Id="th_NEUTER.pak" Guid="{6F31D0C4-2C97-4885-B4E3-4A14CD3CFC5D}">
+                    <File Id="th_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\th_NEUTER.pak" />
+                </Component>
+                <Component Id="tr.pak" Guid="{4E76C810-F090-4389-9197-1DA2ED3A6FDF}">
+                    <File Id="tr.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\tr.pak" />
+                </Component>
+                <Component Id="tr_FEMININE.pak" Guid="{0120DA9D-AC8D-40D4-A403-86D775062B2F}">
+                    <File Id="tr_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\tr_FEMININE.pak" />
+                </Component>
+                <Component Id="tr_MASCULINE.pak" Guid="{67D62BF8-FA34-4051-8FD4-7C296145FB4C}">
+                    <File Id="tr_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\tr_MASCULINE.pak" />
+                </Component>
+                <Component Id="tr_NEUTER.pak" Guid="{D9ADC049-6EE7-48F5-B607-98D7DBCDCA38}">
+                    <File Id="tr_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\tr_NEUTER.pak" />
+                </Component>
+                <Component Id="uk.pak" Guid="{A95A6BEA-5AE8-4C43-AE40-841301BE9E76}">
+                    <File Id="uk.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\uk.pak" />
+                </Component>
+                <Component Id="uk_FEMININE.pak" Guid="{9088377B-D30E-41F6-9DD2-E323BF2A70CF}">
+                    <File Id="uk_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\uk_FEMININE.pak" />
+                </Component>
+                <Component Id="uk_MASCULINE.pak" Guid="{1FE35830-F48F-441D-8DA2-CDC1C0AC9316}">
+                    <File Id="uk_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\uk_MASCULINE.pak" />
+                </Component>
+                <Component Id="uk_NEUTER.pak" Guid="{776A8105-0C95-400D-BE24-CD5D818B7164}">
+                    <File Id="uk_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\uk_NEUTER.pak" />
+                </Component>
+                <Component Id="ur.pak" Guid="{3D7F04E8-19E9-485D-9B25-1559BC909A95}">
+                    <File Id="ur.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ur.pak" />
+                </Component>
+                <Component Id="ur_FEMININE.pak" Guid="{0DF7ECC3-CB11-4024-AA1D-8F910F4854E1}">
+                    <File Id="ur_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ur_FEMININE.pak" />
+                </Component>
+                <Component Id="ur_MASCULINE.pak" Guid="{9AFCAA0D-C596-4DE9-BA5C-7C9674E9CA81}">
+                    <File Id="ur_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ur_MASCULINE.pak" />
+                </Component>
+                <Component Id="ur_NEUTER.pak" Guid="{DE704304-39E8-4B4E-B18F-9B16631F4971}">
+                    <File Id="ur_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\ur_NEUTER.pak" />
+                </Component>
+                <Component Id="vi.pak" Guid="{BA8F8857-6571-4B02-AF8E-8F1F56E06637}">
+                    <File Id="vi.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\vi.pak" />
+                </Component>
+                <Component Id="vi_FEMININE.pak" Guid="{ABB14ED2-F6E5-480A-8B25-4031B89F47C7}">
+                    <File Id="vi_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\vi_FEMININE.pak" />
+                </Component>
+                <Component Id="vi_MASCULINE.pak" Guid="{F62FF92F-C1BA-4BEB-B9A4-65143BD30F37}">
+                    <File Id="vi_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\vi_MASCULINE.pak" />
+                </Component>
+                <Component Id="vi_NEUTER.pak" Guid="{2A55F6AE-7840-4BDF-BEB7-A7C9312FAF3B}">
+                    <File Id="vi_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\vi_NEUTER.pak" />
+                </Component>
+                <Component Id="zh_CN.pak" Guid="{70845C85-1965-44DD-ACE6-2926433A8BD2}">
+                    <File Id="zh_CN.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-CN.pak" />
+                </Component>
+                <Component Id="zh_CN_FEMININE.pak" Guid="{EC590DF3-D1AA-4DC5-AAD0-F44F8DB8E928}">
+                    <File Id="zh_CN_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-CN_FEMININE.pak" />
+                </Component>
+                <Component Id="zh_CN_MASCULINE.pak" Guid="{EBD1636B-3678-4300-AB82-A46CA4E9F7F8}">
+                    <File Id="zh_CN_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-CN_MASCULINE.pak" />
+                </Component>
+                <Component Id="zh_CN_NEUTER.pak" Guid="{AB78DED0-C029-49D8-BD5D-7EE01DBD3B61}">
+                    <File Id="zh_CN_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-CN_NEUTER.pak" />
+                </Component>
+                <Component Id="zh_TW.pak" Guid="{A260DEB2-3F90-4F16-AD9E-83FE020ED6FA}">
+                    <File Id="zh_TW.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-TW.pak" />
+                </Component>
+                <Component Id="zh_TW_FEMININE.pak" Guid="{DDDED593-B026-4FBD-95FF-BD77D6A53F41}">
+                    <File Id="zh_TW_FEMININE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-TW_FEMININE.pak" />
+                </Component>
+                <Component Id="zh_TW_MASCULINE.pak" Guid="{E3A288D9-9E13-42C3-96AF-C7B1C1905715}">
+                    <File Id="zh_TW_MASCULINE.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-TW_MASCULINE.pak" />
+                </Component>
+                <Component Id="zh_TW_NEUTER.pak" Guid="{0DB9E47A-4ED8-42F2-8F3E-793570691B55}">
+                    <File Id="zh_TW_NEUTER.pak" KeyPath="yes" Source="$(var.BuildDir)\locales\zh-TW_NEUTER.pak" />
+                </Component>
+            </Directory>
+            <Directory Id="pt" Name="pt">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_6" Guid="{9EB7AFD1-07B3-4DB3-903C-53015F774F62}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_6" KeyPath="yes" Source="$(var.BuildDir)\pt\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="ru" Name="ru">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_7" Guid="{DD95B911-754C-4612-B086-2D18F7FBDC9E}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_7" KeyPath="yes" Source="$(var.BuildDir)\ru\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="runtimes" Name="runtimes">
+                <Directory Id="win_arm" Name="win-arm">
+                    <Directory Id="native" Name="native">
+                        <Component Id="e_sqlite3.dll_1" Guid="{655CAE80-E93A-4738-94B6-727367517F47}">
+                            <File Id="e_sqlite3.dll_1" KeyPath="yes" Source="$(var.BuildDir)\runtimes\win-arm\native\e_sqlite3.dll" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="win_x64" Name="win-x64">
+                    <Directory Id="native_1" Name="native">
+                        <Component Id="e_sqlite3.dll_2" Guid="{CDAD20A6-1A11-46A9-B8D5-CEEE186CB826}">
+                            <File Id="e_sqlite3.dll_2" KeyPath="yes" Source="$(var.BuildDir)\runtimes\win-x64\native\e_sqlite3.dll" />
+                        </Component>
+                    </Directory>
+                </Directory>
+                <Directory Id="win_x86" Name="win-x86">
+                    <Directory Id="native_2" Name="native">
+                        <Component Id="e_sqlite3.dll_3" Guid="{A570A530-F731-4636-9607-4E2E5C247E89}">
+                            <File Id="e_sqlite3.dll_3" KeyPath="yes" Source="$(var.BuildDir)\runtimes\win-x86\native\e_sqlite3.dll" />
+                        </Component>
+                        <Component Id="WebView2Loader.dll_1" Guid="{56A99DE1-FC5C-46B8-A2CA-A5DC89AB9667}">
+                            <File Id="WebView2Loader.dll_1" KeyPath="yes" Source="$(var.BuildDir)\runtimes\win-x86\native\WebView2Loader.dll" />
+                        </Component>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="watchdog" Name="watchdog">
+                <Directory Id="watchdog_x64_dir" Name="x64">
+                    <Component Id="Nini.dll" Guid="{4390DA23-305C-4306-9609-A90EE13702F0}">
+                        <File Id="Nini.dll" KeyPath="yes" Source="$(var.BuildDir)\watchdog\x64\Nini.dll" />
+                    </Component>
+                    <Component Id="XiboClientWatchdog.exe" Guid="{F1E4B794-7441-4B6D-9125-9C5F9326532A}">
+                        <File Id="XiboClientWatchdog.exe" KeyPath="yes" Source="$(var.BuildDir)\watchdog\x64\XiboClientWatchdog.exe" />
+                    </Component>
+                    <Component Id="XiboClientWatchdog.exe.config" Guid="{B28C5C9F-F1F5-43C7-B5AB-E89B0B1C1D2B}">
+                        <File Id="XiboClientWatchdog.exe.config" KeyPath="yes" Source="$(var.BuildDir)\watchdog\x64\XiboClientWatchdog.exe.config" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="zh_Hans" Name="zh-Hans">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_8" Guid="{65B64945-ADAD-4DE7-9561-4F8645C1E99B}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_8" KeyPath="yes" Source="$(var.BuildDir)\zh-Hans\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+            <Directory Id="zh_Hant" Name="zh-Hant">
+                <Component Id="Microsoft.SqlServer.Types.resources.dll_9" Guid="{4CC46330-63A9-47EB-AFA5-BEF4D898368D}">
+                    <File Id="Microsoft.SqlServer.Types.resources.dll_9" KeyPath="yes" Source="$(var.BuildDir)\zh-Hant\Microsoft.SqlServer.Types.resources.dll" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="XiboFiles">
+            <ComponentRef Id="AsyncIO.dll" />
+            <ComponentRef Id="AsyncIO.pdb" />
+            <ComponentRef Id="BouncyCastle.Cryptography.dll" />
+            <ComponentRef Id="CefSharp.BrowserSubprocess.Core.dll" />
+            <ComponentRef Id="CefSharp.BrowserSubprocess.Core.pdb" />
+            <ComponentRef Id="CefSharp.BrowserSubprocess.exe" />
+            <ComponentRef Id="CefSharp.BrowserSubprocess.pdb" />
+            <ComponentRef Id="CefSharp.Core.dll" />
+            <ComponentRef Id="CefSharp.Core.pdb" />
+            <ComponentRef Id="CefSharp.Core.Runtime.dll" />
+            <ComponentRef Id="CefSharp.Core.Runtime.pdb" />
+            <ComponentRef Id="CefSharp.Core.Runtime.xml" />
+            <ComponentRef Id="CefSharp.dll" />
+            <ComponentRef Id="CefSharp.pdb" />
+            <ComponentRef Id="CefSharp.Wpf.dll" />
+            <ComponentRef Id="CefSharp.Wpf.pdb" />
+            <ComponentRef Id="chrome_100_percent.pak" />
+            <ComponentRef Id="chrome_200_percent.pak" />
+            <ComponentRef Id="chrome_elf.dll" />
+            <ComponentRef Id="Crc32.NET.dll" />
+            <ComponentRef Id="d3dcompiler_47.dll" />
+            <ComponentRef Id="default.config.xml" />
+            <ComponentRef Id="DotNetZip.dll" />
+            <ComponentRef Id="DotNetZip.pdb" />
+            <ComponentRef Id="dxcompiler.dll" />
+            <ComponentRef Id="dxil.dll" />
+            <ComponentRef Id="EmbedIO.dll" />
+            <ComponentRef Id="EmbedIO.pdb" />
+            <ComponentRef Id="e_sqlite3.dll" />
+            <ComponentRef Id="Flurl.dll" />
+            <ComponentRef Id="Flurl.Http.dll" />
+            <ComponentRef Id="GeoJSON.Net.Contrib.MsSqlSpatial.dll" />
+            <ComponentRef Id="GeoJSON.Net.dll" />
+            <ComponentRef Id="icudtl.dat" />
+            <ComponentRef Id="libcef.dll" />
+            <ComponentRef Id="libEGL.dll" />
+            <ComponentRef Id="libGLESv2.dll" />
+            <ComponentRef Id="Microsoft.Bcl.AsyncInterfaces.dll" />
+            <ComponentRef Id="Microsoft.Data.Sqlite.dll" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.dll" />
+            <ComponentRef Id="Microsoft.Web.WebView2.Core.dll" />
+            <ComponentRef Id="Microsoft.Web.WebView2.WinForms.dll" />
+            <ComponentRef Id="Microsoft.Web.WebView2.Wpf.dll" />
+            <ComponentRef Id="msvcr120.dll" />
+            <ComponentRef Id="NaCl.dll" />
+            <ComponentRef Id="NetMQ.dll" />
+            <ComponentRef Id="Newtonsoft.Json.dll" />
+            <ComponentRef Id="NodaTime.dll" />
+            <ComponentRef Id="NodaTime.pdb" />
+            <ComponentRef Id="Ookii.Dialogs.Wpf.dll" />
+            <ComponentRef Id="Ookii.Dialogs.Wpf.pdb" />
+            <ComponentRef Id="resources.pak" />
+            <ComponentRef Id="SQLitePCLRaw.batteries_v2.dll" />
+            <ComponentRef Id="SQLitePCLRaw.core.dll" />
+            <ComponentRef Id="SQLitePCLRaw.provider.dynamic_cdecl.dll" />
+            <ComponentRef Id="SqlServerSpatial140.dll" />
+            <ComponentRef Id="SqlServerSpatial160.dll" />
+            <ComponentRef Id="Swan.dll" />
+            <ComponentRef Id="Swan.Lite.dll" />
+            <ComponentRef Id="System.Buffers.dll" />
+            <ComponentRef Id="System.Memory.dll" />
+            <ComponentRef Id="System.Numerics.Vectors.dll" />
+            <ComponentRef Id="System.Runtime.CompilerServices.Unsafe.dll" />
+            <ComponentRef Id="System.Threading.Tasks.Extensions.dll" />
+            <ComponentRef Id="System.ValueTuple.dll" />
+            <ComponentRef Id="v8_context_snapshot.bin" />
+            <ComponentRef Id="vk_swiftshader.dll" />
+            <ComponentRef Id="vk_swiftshader_icd.json" />
+            <ComponentRef Id="vulkan_1.dll" />
+            <ComponentRef Id="websocket_sharp.dll" />
+            <ComponentRef Id="WebView2Loader.dll" />
+            <ComponentRef Id="xibo_win64_client_README.txt" />
+            <ComponentRef Id="Xibo.scr" />
+            <ComponentRef Id="Xibo.scr.config" />
+            <ComponentRef Id="XiboClient.exe" />
+            <ComponentRef Id="XiboClient.exe.config" />
+            <ComponentRef Id="XiboClient.pdb" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_1" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_2" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_3" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_4" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_5" />
+            <ComponentRef Id="af.pak" />
+            <ComponentRef Id="af_FEMININE.pak" />
+            <ComponentRef Id="af_MASCULINE.pak" />
+            <ComponentRef Id="af_NEUTER.pak" />
+            <ComponentRef Id="am.pak" />
+            <ComponentRef Id="am_FEMININE.pak" />
+            <ComponentRef Id="am_MASCULINE.pak" />
+            <ComponentRef Id="am_NEUTER.pak" />
+            <ComponentRef Id="ar.pak" />
+            <ComponentRef Id="ar_FEMININE.pak" />
+            <ComponentRef Id="ar_MASCULINE.pak" />
+            <ComponentRef Id="ar_NEUTER.pak" />
+            <ComponentRef Id="bg.pak" />
+            <ComponentRef Id="bg_FEMININE.pak" />
+            <ComponentRef Id="bg_MASCULINE.pak" />
+            <ComponentRef Id="bg_NEUTER.pak" />
+            <ComponentRef Id="bn.pak" />
+            <ComponentRef Id="bn_FEMININE.pak" />
+            <ComponentRef Id="bn_MASCULINE.pak" />
+            <ComponentRef Id="bn_NEUTER.pak" />
+            <ComponentRef Id="ca.pak" />
+            <ComponentRef Id="ca_FEMININE.pak" />
+            <ComponentRef Id="ca_MASCULINE.pak" />
+            <ComponentRef Id="ca_NEUTER.pak" />
+            <ComponentRef Id="cs.pak" />
+            <ComponentRef Id="cs_FEMININE.pak" />
+            <ComponentRef Id="cs_MASCULINE.pak" />
+            <ComponentRef Id="cs_NEUTER.pak" />
+            <ComponentRef Id="da.pak" />
+            <ComponentRef Id="da_FEMININE.pak" />
+            <ComponentRef Id="da_MASCULINE.pak" />
+            <ComponentRef Id="da_NEUTER.pak" />
+            <ComponentRef Id="de.pak" />
+            <ComponentRef Id="de_FEMININE.pak" />
+            <ComponentRef Id="de_MASCULINE.pak" />
+            <ComponentRef Id="de_NEUTER.pak" />
+            <ComponentRef Id="el.pak" />
+            <ComponentRef Id="el_FEMININE.pak" />
+            <ComponentRef Id="el_MASCULINE.pak" />
+            <ComponentRef Id="el_NEUTER.pak" />
+            <ComponentRef Id="en_GB.pak" />
+            <ComponentRef Id="en_GB_FEMININE.pak" />
+            <ComponentRef Id="en_GB_MASCULINE.pak" />
+            <ComponentRef Id="en_GB_NEUTER.pak" />
+            <ComponentRef Id="en_US.pak" />
+            <ComponentRef Id="en_US_FEMININE.pak" />
+            <ComponentRef Id="en_US_MASCULINE.pak" />
+            <ComponentRef Id="en_US_NEUTER.pak" />
+            <ComponentRef Id="es_419.pak" />
+            <ComponentRef Id="es_419_FEMININE.pak" />
+            <ComponentRef Id="es_419_MASCULINE.pak" />
+            <ComponentRef Id="es_419_NEUTER.pak" />
+            <ComponentRef Id="es.pak" />
+            <ComponentRef Id="es_FEMININE.pak" />
+            <ComponentRef Id="es_MASCULINE.pak" />
+            <ComponentRef Id="es_NEUTER.pak" />
+            <ComponentRef Id="et.pak" />
+            <ComponentRef Id="et_FEMININE.pak" />
+            <ComponentRef Id="et_MASCULINE.pak" />
+            <ComponentRef Id="et_NEUTER.pak" />
+            <ComponentRef Id="fa.pak" />
+            <ComponentRef Id="fa_FEMININE.pak" />
+            <ComponentRef Id="fa_MASCULINE.pak" />
+            <ComponentRef Id="fa_NEUTER.pak" />
+            <ComponentRef Id="fi.pak" />
+            <ComponentRef Id="fil.pak" />
+            <ComponentRef Id="fil_FEMININE.pak" />
+            <ComponentRef Id="fil_MASCULINE.pak" />
+            <ComponentRef Id="fil_NEUTER.pak" />
+            <ComponentRef Id="fi_FEMININE.pak" />
+            <ComponentRef Id="fi_MASCULINE.pak" />
+            <ComponentRef Id="fi_NEUTER.pak" />
+            <ComponentRef Id="fr.pak" />
+            <ComponentRef Id="fr_FEMININE.pak" />
+            <ComponentRef Id="fr_MASCULINE.pak" />
+            <ComponentRef Id="fr_NEUTER.pak" />
+            <ComponentRef Id="gu.pak" />
+            <ComponentRef Id="gu_FEMININE.pak" />
+            <ComponentRef Id="gu_MASCULINE.pak" />
+            <ComponentRef Id="gu_NEUTER.pak" />
+            <ComponentRef Id="he.pak" />
+            <ComponentRef Id="he_FEMININE.pak" />
+            <ComponentRef Id="he_MASCULINE.pak" />
+            <ComponentRef Id="he_NEUTER.pak" />
+            <ComponentRef Id="hi.pak" />
+            <ComponentRef Id="hi_FEMININE.pak" />
+            <ComponentRef Id="hi_MASCULINE.pak" />
+            <ComponentRef Id="hi_NEUTER.pak" />
+            <ComponentRef Id="hr.pak" />
+            <ComponentRef Id="hr_FEMININE.pak" />
+            <ComponentRef Id="hr_MASCULINE.pak" />
+            <ComponentRef Id="hr_NEUTER.pak" />
+            <ComponentRef Id="hu.pak" />
+            <ComponentRef Id="hu_FEMININE.pak" />
+            <ComponentRef Id="hu_MASCULINE.pak" />
+            <ComponentRef Id="hu_NEUTER.pak" />
+            <ComponentRef Id="id.pak" />
+            <ComponentRef Id="id_FEMININE.pak" />
+            <ComponentRef Id="id_MASCULINE.pak" />
+            <ComponentRef Id="id_NEUTER.pak" />
+            <ComponentRef Id="it.pak" />
+            <ComponentRef Id="it_FEMININE.pak" />
+            <ComponentRef Id="it_MASCULINE.pak" />
+            <ComponentRef Id="it_NEUTER.pak" />
+            <ComponentRef Id="ja.pak" />
+            <ComponentRef Id="ja_FEMININE.pak" />
+            <ComponentRef Id="ja_MASCULINE.pak" />
+            <ComponentRef Id="ja_NEUTER.pak" />
+            <ComponentRef Id="kn.pak" />
+            <ComponentRef Id="kn_FEMININE.pak" />
+            <ComponentRef Id="kn_MASCULINE.pak" />
+            <ComponentRef Id="kn_NEUTER.pak" />
+            <ComponentRef Id="ko.pak" />
+            <ComponentRef Id="ko_FEMININE.pak" />
+            <ComponentRef Id="ko_MASCULINE.pak" />
+            <ComponentRef Id="ko_NEUTER.pak" />
+            <ComponentRef Id="lt.pak" />
+            <ComponentRef Id="lt_FEMININE.pak" />
+            <ComponentRef Id="lt_MASCULINE.pak" />
+            <ComponentRef Id="lt_NEUTER.pak" />
+            <ComponentRef Id="lv.pak" />
+            <ComponentRef Id="lv_FEMININE.pak" />
+            <ComponentRef Id="lv_MASCULINE.pak" />
+            <ComponentRef Id="lv_NEUTER.pak" />
+            <ComponentRef Id="ml.pak" />
+            <ComponentRef Id="ml_FEMININE.pak" />
+            <ComponentRef Id="ml_MASCULINE.pak" />
+            <ComponentRef Id="ml_NEUTER.pak" />
+            <ComponentRef Id="mr.pak" />
+            <ComponentRef Id="mr_FEMININE.pak" />
+            <ComponentRef Id="mr_MASCULINE.pak" />
+            <ComponentRef Id="mr_NEUTER.pak" />
+            <ComponentRef Id="ms.pak" />
+            <ComponentRef Id="ms_FEMININE.pak" />
+            <ComponentRef Id="ms_MASCULINE.pak" />
+            <ComponentRef Id="ms_NEUTER.pak" />
+            <ComponentRef Id="nb.pak" />
+            <ComponentRef Id="nb_FEMININE.pak" />
+            <ComponentRef Id="nb_MASCULINE.pak" />
+            <ComponentRef Id="nb_NEUTER.pak" />
+            <ComponentRef Id="nl.pak" />
+            <ComponentRef Id="nl_FEMININE.pak" />
+            <ComponentRef Id="nl_MASCULINE.pak" />
+            <ComponentRef Id="nl_NEUTER.pak" />
+            <ComponentRef Id="pl.pak" />
+            <ComponentRef Id="pl_FEMININE.pak" />
+            <ComponentRef Id="pl_MASCULINE.pak" />
+            <ComponentRef Id="pl_NEUTER.pak" />
+            <ComponentRef Id="pt_BR.pak" />
+            <ComponentRef Id="pt_BR_FEMININE.pak" />
+            <ComponentRef Id="pt_BR_MASCULINE.pak" />
+            <ComponentRef Id="pt_BR_NEUTER.pak" />
+            <ComponentRef Id="pt_PT.pak" />
+            <ComponentRef Id="pt_PT_FEMININE.pak" />
+            <ComponentRef Id="pt_PT_MASCULINE.pak" />
+            <ComponentRef Id="pt_PT_NEUTER.pak" />
+            <ComponentRef Id="ro.pak" />
+            <ComponentRef Id="ro_FEMININE.pak" />
+            <ComponentRef Id="ro_MASCULINE.pak" />
+            <ComponentRef Id="ro_NEUTER.pak" />
+            <ComponentRef Id="ru.pak" />
+            <ComponentRef Id="ru_FEMININE.pak" />
+            <ComponentRef Id="ru_MASCULINE.pak" />
+            <ComponentRef Id="ru_NEUTER.pak" />
+            <ComponentRef Id="sk.pak" />
+            <ComponentRef Id="sk_FEMININE.pak" />
+            <ComponentRef Id="sk_MASCULINE.pak" />
+            <ComponentRef Id="sk_NEUTER.pak" />
+            <ComponentRef Id="sl.pak" />
+            <ComponentRef Id="sl_FEMININE.pak" />
+            <ComponentRef Id="sl_MASCULINE.pak" />
+            <ComponentRef Id="sl_NEUTER.pak" />
+            <ComponentRef Id="sr.pak" />
+            <ComponentRef Id="sr_FEMININE.pak" />
+            <ComponentRef Id="sr_MASCULINE.pak" />
+            <ComponentRef Id="sr_NEUTER.pak" />
+            <ComponentRef Id="sv.pak" />
+            <ComponentRef Id="sv_FEMININE.pak" />
+            <ComponentRef Id="sv_MASCULINE.pak" />
+            <ComponentRef Id="sv_NEUTER.pak" />
+            <ComponentRef Id="sw.pak" />
+            <ComponentRef Id="sw_FEMININE.pak" />
+            <ComponentRef Id="sw_MASCULINE.pak" />
+            <ComponentRef Id="sw_NEUTER.pak" />
+            <ComponentRef Id="ta.pak" />
+            <ComponentRef Id="ta_FEMININE.pak" />
+            <ComponentRef Id="ta_MASCULINE.pak" />
+            <ComponentRef Id="ta_NEUTER.pak" />
+            <ComponentRef Id="te.pak" />
+            <ComponentRef Id="te_FEMININE.pak" />
+            <ComponentRef Id="te_MASCULINE.pak" />
+            <ComponentRef Id="te_NEUTER.pak" />
+            <ComponentRef Id="th.pak" />
+            <ComponentRef Id="th_FEMININE.pak" />
+            <ComponentRef Id="th_MASCULINE.pak" />
+            <ComponentRef Id="th_NEUTER.pak" />
+            <ComponentRef Id="tr.pak" />
+            <ComponentRef Id="tr_FEMININE.pak" />
+            <ComponentRef Id="tr_MASCULINE.pak" />
+            <ComponentRef Id="tr_NEUTER.pak" />
+            <ComponentRef Id="uk.pak" />
+            <ComponentRef Id="uk_FEMININE.pak" />
+            <ComponentRef Id="uk_MASCULINE.pak" />
+            <ComponentRef Id="uk_NEUTER.pak" />
+            <ComponentRef Id="ur.pak" />
+            <ComponentRef Id="ur_FEMININE.pak" />
+            <ComponentRef Id="ur_MASCULINE.pak" />
+            <ComponentRef Id="ur_NEUTER.pak" />
+            <ComponentRef Id="vi.pak" />
+            <ComponentRef Id="vi_FEMININE.pak" />
+            <ComponentRef Id="vi_MASCULINE.pak" />
+            <ComponentRef Id="vi_NEUTER.pak" />
+            <ComponentRef Id="zh_CN.pak" />
+            <ComponentRef Id="zh_CN_FEMININE.pak" />
+            <ComponentRef Id="zh_CN_MASCULINE.pak" />
+            <ComponentRef Id="zh_CN_NEUTER.pak" />
+            <ComponentRef Id="zh_TW.pak" />
+            <ComponentRef Id="zh_TW_FEMININE.pak" />
+            <ComponentRef Id="zh_TW_MASCULINE.pak" />
+            <ComponentRef Id="zh_TW_NEUTER.pak" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_6" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_7" />
+            <ComponentRef Id="e_sqlite3.dll_1" />
+            <ComponentRef Id="e_sqlite3.dll_2" />
+            <ComponentRef Id="e_sqlite3.dll_3" />
+            <ComponentRef Id="WebView2Loader.dll_1" />
+            <ComponentRef Id="Nini.dll" />
+            <ComponentRef Id="XiboClientWatchdog.exe" />
+            <ComponentRef Id="XiboClientWatchdog.exe.config" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_8" />
+            <ComponentRef Id="Microsoft.SqlServer.Types.resources.dll_9" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

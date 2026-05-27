@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <Bundle Name="Xibo Player"
+          Version="5.0.0"
+          Manufacturer="Xibo Signage Ltd"
+          UpgradeCode="{D7E4F1A2-B3C5-4D6E-8F90-1A2B3C4D5E6F}"
+          IconSourceFile="$(var.SrcDir)\XiboPlayer.ico">
+
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.HyperlinkLicense">
+      <bal:WixStandardBootstrapperApplication
+        LicenseUrl=""
+        ShowVersion="yes"
+        SuppressOptionsUI="yes" />
+    </BootstrapperApplicationRef>
+
+    <!-- Detect VC++ 2015-2022 x64 runtime via registry -->
+    <util:RegistrySearch Id="VCRedistX64Search"
+                         Variable="VCRedistX64Installed"
+                         Root="HKLM"
+                         Key="SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\X64"
+                         Value="Installed"
+                         Win64="yes" />
+
+    <Chain>
+
+      <!-- Install VC++ 2015-2022 x64 silently if not already present -->
+      <ExePackage Id="VCRedistX64"
+                  Name="Microsoft Visual C++ 2015-2022 Redistributable (x64)"
+                  SourceFile="$(var.VCRedist)"
+                  InstallCommand="/install /quiet /norestart"
+                  RepairCommand="/repair /quiet /norestart"
+                  UninstallCommand="/uninstall /quiet /norestart"
+                  DetectCondition="VCRedistX64Installed = 1"
+                  Vital="yes"
+                  Permanent="yes" />
+
+      <!-- Xibo Player x64 MSI -->
+      <MsiPackage Id="XiboPlayer"
+                  SourceFile="$(var.MsiPath)"
+                  Vital="yes" />
+
+    </Chain>
+
+  </Bundle>
+
+</Wix>

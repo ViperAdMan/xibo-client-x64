@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="{A2039BF5-3085-4FC4-A0A4-20E6840C447D}"
+           Name="Xibo Player"
+           Language="1033"
+           Version="5.0.0"
+           Manufacturer="Xibo Signage Ltd"
+           UpgradeCode="{443E7578-7FEF-47E8-9078-04DDA8B96F3A}">
+
+    <Package InstallerVersion="500"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Platform="x64"
+             Description="Xibo Player (64-bit)"
+             Manufacturer="Xibo Signage Ltd"
+             Comments="Xibo Player 64-bit installation package." />
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Upgrade: remove any prior x64 Xibo Player before installing -->
+    <MajorUpgrade AllowDowngrades="yes" />
+
+    <!-- ========== PREREQUISITES ========== -->
+
+    <!-- Require 64-bit OS -->
+    <Condition Message="[ProductName] requires a 64-bit version of Windows.">
+      <![CDATA[VersionNT64]]>
+    </Condition>
+
+    <!-- Detect VC++ 2015-2022 x64 runtime via registry -->
+    <Property Id="VCRUNTIME140_X64">
+      <RegistrySearch Id="VCRuntimeSearch" Root="HKLM"
+                      Key="SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\X64"
+                      Name="Installed" Type="raw" Win64="yes" />
+    </Property>
+    <Condition Message="[ProductName] requires the Microsoft Visual C++ 2015-2022 Redistributable (x64). Please download and install it from Microsoft, then run this installer again.">
+      <![CDATA[VCRUNTIME140_X64 = "#1"]]>
+    </Condition>
+
+    <!-- Detect .NET Framework 4.7.2+ via release registry DWORD (461808 = 4.7.2) -->
+    <Property Id="NETFRAMEWORK_RELEASE">
+      <RegistrySearch Id="DotNetReleaseSearch" Root="HKLM"
+                      Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"
+                      Name="Release" Type="raw" Win64="yes" />
+    </Property>
+    <Condition Message="[ProductName] requires .NET Framework 4.7.2 or later. Please install it from Microsoft, then run this installer again.">
+      <![CDATA[NETFRAMEWORK_RELEASE >= "#461808"]]>
+    </Condition>
+
+    <!-- ========== ICON ========== -->
+    <Icon Id="XiboClient_ico" SourceFile="$(var.BuildDir)\XiboClient.exe" />
+    <Property Id="ARPPRODUCTICON" Value="XiboClient_ico" />
+    <Property Id="ARPHELPLINK" Value="https://xibosignage.com" />
+
+    <!-- ========== UI ========== -->
+    <Property Id="WIXUI_INSTALLDIR" Value="APPDIR" />
+    <UIRef Id="WixUI_InstallDir" />
+
+    <!-- ========== DIRECTORY STRUCTURE ========== -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="APPDIR" Name="Xibo Player" />
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="SHORTCUTDIR" Name="Xibo Player" />
+      </Directory>
+      <Directory Id="StartupFolder" />
+    </Directory>
+
+    <!-- ========== FEATURE ========== -->
+    <Feature Id="MainFeature" Title="Xibo Player" Level="1">
+      <ComponentGroupRef Id="XiboFiles" />
+      <ComponentRef Id="AppDirCreate" />
+      <ComponentRef Id="ShortcutDirCreate" />
+      <ComponentRef Id="ShortcutsComp" />
+      <ComponentRef Id="IEBrowserEmulation" />
+      <ComponentRef Id="IEGpuRendering" />
+      <ComponentRef Id="PPT_HKCR_Show12_Browser" />
+      <ComponentRef Id="PPT_HKCR_Show12_Edit" />
+      <ComponentRef Id="PPT_HKCR_Show8_Browser" />
+      <ComponentRef Id="PPT_HKCR_Show8_Edit" />
+      <ComponentRef Id="PPT_HKCR_SlideShow12_Browser" />
+      <ComponentRef Id="PPT_HKCR_SlideShow12_Edit" />
+      <ComponentRef Id="PPT_HKCR_SlideShow8_Browser" />
+      <ComponentRef Id="PPT_HKCR_SlideShow8_Edit" />
+      <ComponentRef Id="PPT_HKLM_Show8" />
+      <ComponentRef Id="PPT_HKLM_Show9" />
+      <ComponentRef Id="PPT_HKLM_Show10" />
+      <ComponentRef Id="PPT_HKLM_Show11" />
+      <ComponentRef Id="PPT_HKLM_Show12" />
+      <ComponentRef Id="PPT_HKLM_Show14" />
+      <ComponentRef Id="PPT_HKLM_ShowME8" />
+      <ComponentRef Id="PPT_HKLM_ShowME9" />
+      <ComponentRef Id="PPT_HKLM_ShowME10" />
+      <ComponentRef Id="PPT_HKLM_ShowME11" />
+      <ComponentRef Id="PPT_HKLM_ShowME12" />
+      <ComponentRef Id="PPT_HKLM_ShowME14" />
+      <ComponentRef Id="PPT_HKLM_SS8" />
+      <ComponentRef Id="PPT_HKLM_SS9" />
+      <ComponentRef Id="PPT_HKLM_SS10" />
+      <ComponentRef Id="PPT_HKLM_SS11" />
+      <ComponentRef Id="PPT_HKLM_SS12" />
+      <ComponentRef Id="PPT_HKLM_SS14" />
+      <ComponentRef Id="PPT_HKLM_SSME8" />
+      <ComponentRef Id="PPT_HKLM_SSME9" />
+      <ComponentRef Id="PPT_HKLM_SSME10" />
+      <ComponentRef Id="PPT_HKLM_SSME11" />
+      <ComponentRef Id="PPT_HKLM_SSME12" />
+      <ComponentRef Id="PPT_HKLM_SSME14" />
+    </Feature>
+
+    <!-- ========== COMPONENTS ========== -->
+
+    <!-- Create APPDIR -->
+    <DirectoryRef Id="APPDIR">
+      <Component Id="AppDirCreate" Guid="{5DC81F01-B504-4ACC-97E7-33DEF6F3D9F5}" Win64="yes">
+        <CreateFolder />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Create SHORTCUTDIR in Start Menu -->
+    <DirectoryRef Id="SHORTCUTDIR">
+      <Component Id="ShortcutDirCreate" Guid="{0591951D-9AB0-4FAB-B339-4AC5E8FDA22B}">
+        <CreateFolder />
+        <RemoveFolder Id="RemoveShortcutDir" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\XiboSignage\XiboPlayer64"
+                       Name="ShortcutsInstalled" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Shortcuts component (attached to APPDIR, keyed on registry) -->
+    <DirectoryRef Id="APPDIR">
+      <Component Id="ShortcutsComp" Guid="{3DEC1413-15E9-4870-8044-0022EDCB1CE2}" Win64="yes">
+        <!-- Xibo Player (maximized) in Start Menu -->
+        <Shortcut Id="SC_XiboPlayer" Directory="SHORTCUTDIR"
+                  Name="Xibo Player"
+                  Target="[#XiboClient.exe]"
+                  WorkingDirectory="APPDIR"
+                  Icon="XiboClient_ico" IconIndex="0"
+                  Show="maximized" />
+        <!-- Xibo Player Options in Start Menu -->
+        <Shortcut Id="SC_XiboPlayerOptions" Directory="SHORTCUTDIR"
+                  Name="Xibo Player Options"
+                  Target="[#XiboClient.exe]"
+                  Arguments="o"
+                  WorkingDirectory="APPDIR"
+                  Icon="XiboClient_ico" IconIndex="0"
+                  Show="normal" />
+        <!-- Xibo Player Watchdog in Start Menu -->
+        <Shortcut Id="SC_XiboPlayerWatchdog" Directory="SHORTCUTDIR"
+                  Name="Xibo Player Watchdog"
+                  Target="[#XiboClientWatchdog.exe]"
+                  WorkingDirectory="watchdog_x64_dir"
+                  Show="minimized" />
+        <!-- Xibo Player in Startup folder (auto-start) -->
+        <Shortcut Id="SC_XiboPlayerStartup" Directory="StartupFolder"
+                  Name="Xibo Player"
+                  Target="[#XiboClient.exe]"
+                  WorkingDirectory="APPDIR"
+                  Icon="XiboClient_ico" IconIndex="0"
+                  Show="maximized" />
+        <RemoveFolder Id="RemoveStartupShortcut" Directory="StartupFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\XiboSignage\XiboPlayer64"
+                       Name="Installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- IE Feature Control: FEATURE_BROWSER_EMULATION (64-bit hive only) -->
+    <DirectoryRef Id="APPDIR">
+      <Component Id="IEBrowserEmulation" Guid="{C362DD4A-D34F-4259-A3CF-A53154716EF5}" Win64="yes">
+        <RegistryValue Id="RegBrowserEmul" Root="HKLM"
+                       Key="SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION"
+                       Name="XiboClient.exe" Value="11000" Type="integer" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- IE Feature Control: FEATURE_GPU_RENDERING (64-bit hive only) -->
+    <DirectoryRef Id="APPDIR">
+      <Component Id="IEGpuRendering" Guid="{B0642643-6894-47C6-AEB5-7C26E3D87D93}" Win64="yes">
+        <RegistryValue Id="RegGpuRendering" Root="HKLM"
+                       Key="SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_GPU_RENDERING"
+                       Name="XiboClient.exe" Value="1" Type="integer" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- PowerPoint HKCR registry keys (file association browser flags) -->
+    <DirectoryRef Id="APPDIR">
+      <Component Id="PPT_HKCR_Show12_Browser" Guid="{01FA5556-B122-4629-AF79-D639D6407722}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.Show.12" Name="BrowserFlags" Value="2" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_Show12_Edit" Guid="{30C6A23B-8B89-4F45-8031-2209FCAA2EBC}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.Show.12" Name="EditFlags" Value="65536" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_Show8_Browser" Guid="{2FD789ED-873D-478F-B1EE-E63313A2B281}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.Show.8" Name="BrowserFlags" Value="2" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_Show8_Edit" Guid="{C6848A0F-837B-4048-AB2D-7B607DAEAECD}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.Show.8" Name="EditFlags" Value="65536" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_SlideShow12_Browser" Guid="{6CF96012-A209-4702-9E51-2E46522D42FF}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.SlideShow.12" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_SlideShow12_Edit" Guid="{B1067786-0B45-4A1B-90C8-B1F280BFBC13}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.SlideShow.12" Name="EditFlags" Value="65536" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_SlideShow8_Browser" Guid="{B58C14AE-14CE-4D9F-9748-2EF7FA716E59}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.SlideShow.8" Name="BrowserFlags" Value="2" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKCR_SlideShow8_Edit" Guid="{96E1D2A4-0D96-4602-A9BD-3B35D544472C}">
+        <RegistryValue Root="HKCR" Key="PowerPoint.SlideShow.8" Name="EditFlags" Value="65536" Type="integer" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- PowerPoint HKLM\SOFTWARE\Classes registry keys (64-bit hive) -->
+    <DirectoryRef Id="APPDIR">
+      <Component Id="PPT_HKLM_Show8"   Guid="{1E2D1932-70E7-4B92-B79D-B336E8CDB4D7}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.Show.8"   Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_Show9"   Guid="{EB410300-F23C-42CC-8004-20575C057D01}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.Show.9"   Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_Show10"  Guid="{9F0BEBFD-221A-4D1A-9D84-146D6895DE73}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.Show.10"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_Show11"  Guid="{63095611-5175-4692-9DE8-ECF1793B140A}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.Show.11"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_Show12"  Guid="{1C88C635-2342-457E-8430-64A38D7FC0EC}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.Show.12"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_Show14"  Guid="{4E197A52-396A-431E-BC11-506F68D10507}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.Show.14"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_ShowME8"  Guid="{B8DBBE71-EE2C-4304-BC4C-F13BB703217A}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.8"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_ShowME9"  Guid="{3009D985-337B-4B5B-BF4D-C3E0D8C2FA94}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.9"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_ShowME10" Guid="{C4F2002B-2A97-4729-AC63-1A532B401572}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.10" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_ShowME11" Guid="{1C876C3C-91D5-4A86-9431-2643E1F65745}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.11" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_ShowME12" Guid="{39424640-04B0-46F9-82AB-7F7EEBEA076E}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.12" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_ShowME14" Guid="{4D9438A4-E0A1-45A0-852D-B4B87F3C38FB}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.ShowMacroEnabled.14" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SS8"   Guid="{F2C10429-098C-487A-8A3C-06D41EEB3E5F}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShow.8"   Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SS9"   Guid="{431BE7CA-9D67-46FA-9199-CB53B0F67656}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShow.9"   Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SS10"  Guid="{B39AD440-D718-40FA-A4FE-265B46AFD6C0}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShow.10"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SS11"  Guid="{1EE37101-016B-4495-9B9B-87928707088B}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShow.11"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SS12"  Guid="{E6FBCA78-724C-48FB-B7A1-9289CBA7AD43}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShow.12"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SS14"  Guid="{F9897D7F-E028-41A5-A165-E553FDCF7F39}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShow.14"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SSME8"  Guid="{70AC553D-3A81-4F78-B471-DCDA234BAF15}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.8"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SSME9"  Guid="{1C4BC8CB-6880-4944-987D-8F947379086E}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.9"  Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SSME10" Guid="{24181158-93B2-4B44-B719-B0BCB17E22CA}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.10" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SSME11" Guid="{CC174092-9CF9-4112-A40E-A66CA9F7F463}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.11" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SSME12" Guid="{783C2681-B07C-4E69-A0FA-19EC95A0A00E}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.12" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+      <Component Id="PPT_HKLM_SSME14" Guid="{A565CBB2-E7F1-421B-B027-6C3972D44AF2}" Win64="yes">
+        <RegistryValue Root="HKLM" Key="SOFTWARE\Classes\PowerPoint.SlideShowMacroEnabled.14" Name="BrowserFlags" Value="2147483808" Type="integer" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+  </Product>
+</Wix>
