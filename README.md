@@ -52,7 +52,7 @@ The `wix-src/` folder in this repository contains the full WiX source used to bu
 
 ## Full write-up
 
-A detailed technical article covering every step of the conversion process is available at **[PASTE YOUR BLOG URL HERE]**.
+A detailed technical article covering every step of the conversion process is available at **https://viperadman.blogspot.com/2026/05/converting-xibo-windows-player-x86-to-x64.html**.
 
 ## Licence
 
